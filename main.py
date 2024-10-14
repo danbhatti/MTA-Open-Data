@@ -10,6 +10,7 @@ import argparse
 
 def main():
     args = parse_args()
+    print(args)
 
 
 def parse_args():
