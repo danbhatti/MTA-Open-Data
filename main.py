@@ -24,6 +24,14 @@ def main():
     working_data = filter_data(df) # filters data based on filter_data method
     working_graph = graph.Network(working_data)
 
+    working_data.to_csv('data/CBD_MTA_Subway_Stations')
+    a = working_graph.adjacency_matrix
+    #print(working_graph)
+    b = working_graph.dijkstra('33 St')
+    print(b)
+
+
+    
     geometry = [Point(xy) for xy in zip(working_data["GTFS Longitude"], 
                                         working_data["GTFS Latitude"])]
     
@@ -31,10 +39,10 @@ def main():
 
     G = nx.Graph()
     
-    for i in range(working_graph.adjacency_matrix.shape[0]): 
-        for j in range(i, working_graph.adjacency_matrix.shape[1]): 
-            if working_graph.adjacency_matrix[i][j] == 1: 
-                G.add_edge(i,j) 
+    
+    for j in range(working_graph.adjacency_matrix.shape[1]): 
+        if working_graph.adjacency_matrix[77][j] == 1: 
+            G.add_edge(77,j) 
   
 
     edges = []
@@ -46,18 +54,17 @@ def main():
     edges_gdf = gpd.GeoDataFrame(geometry=edges, crs="EPSG:2263")
     # Plot nodes (station points) and edges (connections)
     fig, ax = plt.subplots()
-    edges_gdf.plot(ax=ax, color='black', linewidth= 0.3, alpha=0.3)  # Plot edges
+    edges_gdf.plot(ax=ax, color='black', linewidth= 1, alpha=1)  # Plot edges
     station_points.plot(ax=ax, color='#0039A5', markersize=10, zorder=2)  # Plot nodes
 
     # Optionally, you can customize the limits and titles
     ax.set_title("MTA CBD Subway Network")
     ax.set_xlabel("GTFS Longitude")
     ax.set_ylabel("GTFS Latitude")
-    plt.savefig('figures/testfig3.png', dpi = 1000)
-    plt.show()
+    plt.savefig('figures/testfig4.png', dpi = 1000)
+    #plt.show()
 
-    print(working_graph.adjacency_matrix)
-    print(working_graph.distance_matrix)
+    
 
 def parse_args():
     """Parse command line arguments (build-graph files)."""

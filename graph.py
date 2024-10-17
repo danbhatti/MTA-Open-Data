@@ -16,33 +16,54 @@ class Network:
         return:  
         """
         self.station_names = {}; self.daytime_routes = {}
-        station_count = data.shape[0]
-        for n in range(station_count):
+        self.station_count = data.shape[0]
+        for n in range(self.station_count):
             self.station_names[n] = data.iat[n,5]
             self.daytime_routes[n] = data.iat[n,8]
             
         # stations are considered adjacent if they share one or more lines between them
-        self.adjacency_matrix = np.zeros((station_count, station_count), dtype=int)
-        for i in range(station_count):
-            for j in range(station_count):
+        self.adjacency_matrix = np.zeros((self.station_count, self.station_count), dtype=int)
+        for i in range(self.station_count):
+            for j in range(self.station_count):
                 if self.shares_element(self.daytime_routes[i], self.daytime_routes[j]):
                     self.adjacency_matrix[i][j] = 1
 
-        # distance matrix to do djistras algorithm
-        self.distance_matrix = np.full((station_count, station_count), 100, dtype=int)
-        for k in range(station_count):
-            if self.adjacency_matrix[0][k] == 1: # always evaluates to false :(
-                self.distance_matrix[0][k] == 1
-            else:
-                self.distance_matrix[0][k] == 100
-        self.distance_matrix[0][0] = 0
 
-        ind_explored = np.full(station_count, False)
-        ind_explored[0] = True
+        
+    def dijkstra(self, source_name):
+        source_node = 0
+        helper_bool_list = np.full(shape=self.station_count, fill_value=False)
+        helper_dist_list = np.full(shape=self.station_count, fill_value=float('inf'))
 
-        while False in ind_explored:
-            min_value = min(self.distance_matrix[0])
-            print('p')
+        # matches the station name with its place in the adjacency matrix
+        for i in range(self.station_count):
+            if source_name == self.station_names[i]:
+                source_node = i
+                break
+
+        # slices the row corresponding to the source node from the adjacency matrix
+        adjacency_list = self.adjacency_matrix[source_node, :]
+        curr_node = source_node
+        helper_dist_list[curr_node] = 0
+        for i in range(self.station_count):
+            helper_bool_list[curr_node] = True
+            for j in range(self.station_count):
+                if (helper_dist_list[curr_node] + adjacency_list[j] < helper_dist_list[j]) and adjacency_list[j] == 1:
+                    helper_dist_list[j] = helper_dist_list[curr_node] + adjacency_list[j]
+            # update the current node
+            min_value = float('inf')
+            for k in range(self.station_count):
+                if helper_dist_list[k] < min_value and helper_bool_list[k] == False:
+                    min_value = helper_dist_list[k]
+                    curr_node = k
+    
+        return helper_dist_list
+                
+
+
+
+    
+
 
 
 
