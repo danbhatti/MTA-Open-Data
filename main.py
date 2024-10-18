@@ -61,7 +61,7 @@ def main():
     ax.set_title("MTA CBD Subway Network")
     ax.set_xlabel("GTFS Longitude")
     ax.set_ylabel("GTFS Latitude")
-    plt.savefig('figures/testfig4.png', dpi = 1000)
+    plt.savefig('figures/testfig5.png', dpi = 1000)
     #plt.show()
 
     
@@ -77,7 +77,43 @@ def parse_args():
 
 def filter_data(data):
     refinement = data[data['CBD'] == True] # this filters for just stops in the CDB
+
+    refinement = refinement[refinement['Stop Name'] != 'Lexington Av/59 St']
+    refinement = refinement[refinement['Stop Name'] != '59 St']
+    combined_stop1 = {'GTFS Stop ID': '', 'Station ID': '', 'Complex ID': '',
+                      'Division': '', 'Line': '', 'Stop Name': 'Lexington Av/59 St -- 59 St',
+                      'Borough': 'M', 'CBD': True, 'Daytime Routes': 'N R W 4 5 6',
+                      'Structure': '', 'GTFS Latitude': f'{(40.76266+40.762526)/2}',
+                      'GTFS Longitude': f'{(-73.967258-73.967967)/2}',
+                      'North Direction Label': '', 'South Direction Label': '',
+                      'ADA': '', 'ADA Northbound': '', 'ADA Southbound': '', 
+                      'ADA Notes': '', 'Georeference': ''}
+    refinement = refinement._append(combined_stop1, ignore_index=True)
+
+    refinement = refinement[refinement['Stop Name'] != '59 St-Columbus Circle']
+    combined_stop2 = {'GTFS Stop ID': '', 'Station ID': '', 'Complex ID': '',
+                      'Division': '', 'Line': '', 'Stop Name': '59 St-Columbus Circle',
+                      'Borough': 'M', 'CBD': True, 'Daytime Routes': 'A C B D 1',
+                      'Structure': '', 'GTFS Latitude': f'{(40.768296+40.768247)/2}',
+                      'GTFS Longitude': f'{(-73.981736-73.981929)/2}',
+                      'North Direction Label': 'Uptown', 'South Direction Label': 'Downtown',
+                      'ADA': '', 'ADA Northbound': '', 'ADA Southbound': '', 
+                      'ADA Notes': '', 'Georeference': ''}
+    refinement = refinement._append(combined_stop2, ignore_index=True)
+
+    refinement = refinement[refinement['Stop Name'] != 'Grand Central-42 St']
+    combined_stop3 = {'GTFS Stop ID': '', 'Station ID': '', 'Complex ID': '',
+                      'Division': '', 'Line': '', 'Stop Name': 'Grand Central-42 St',
+                      'Borough': 'M', 'CBD': True, 'Daytime Routes': '4 5 6 7 S',
+                      'Structure': '', 'GTFS Latitude': f'{(40.751776+40.751431+40.752769)/3}',
+                      'GTFS Longitude': f'{(-73.976848-73.976041-73.979189)/3}',
+                      'North Direction Label': '', 'South Direction Label': '',
+                      'ADA': '', 'ADA Northbound': '', 'ADA Southbound': '', 
+                      'ADA Notes': '', 'Georeference': ''}
+    refinement = refinement._append(combined_stop3, ignore_index=True)
+    
     return refinement
+
 
 
 
