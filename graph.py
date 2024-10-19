@@ -19,7 +19,7 @@ class Network:
         self.station_count = data.shape[0]
         for n in range(self.station_count):
             self.station_names[n] = data.iat[n,5]
-            self.daytime_routes[n] = data.iat[n,8]
+            self.daytime_routes[n] = data.iat[n,10]
             
         # stations are considered adjacent if they share one or more lines between them
         self.adjacency_matrix = np.zeros((self.station_count, self.station_count), dtype=int)
@@ -41,21 +41,22 @@ class Network:
                 source_node = i
                 break
 
-        # slices the row corresponding to the source node from the adjacency matrix
-        adjacency_list = self.adjacency_matrix[source_node, :]
-        curr_node = source_node
-        helper_dist_list[curr_node] = 0
+        curr_node = source_node # initializing the node traversal
+        adjacency_list = self.adjacency_matrix[curr_node, :]
+        helper_dist_list[curr_node] = 0 # the distance from the src node to itself is 0
         for i in range(self.station_count):
-            helper_bool_list[curr_node] = True
+            helper_bool_list[curr_node] = True 
             for j in range(self.station_count):
                 if (helper_dist_list[curr_node] + adjacency_list[j] < helper_dist_list[j]) and adjacency_list[j] == 1:
                     helper_dist_list[j] = helper_dist_list[curr_node] + adjacency_list[j]
             # update the current node
             min_value = float('inf')
             for k in range(self.station_count):
+                # if the first neighbor hasn't been explored yet, make it the current node
                 if helper_dist_list[k] < min_value and helper_bool_list[k] == False:
                     min_value = helper_dist_list[k]
                     curr_node = k
+                    adjacency_list = self.adjacency_matrix[curr_node, :]
     
         return helper_dist_list
                 

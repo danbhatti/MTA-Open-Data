@@ -1,92 +1,66 @@
-,GTFS Stop ID,Station ID,Complex ID,Division,Line,Stop Name,Borough,CBD,Daytime Routes,Structure,GTFS Latitude,GTFS Longitude,North Direction Label,South Direction Label,ADA,ADA Northbound,ADA Southbound,ADA Notes,Georeference
-0,R13,8,8,BMT,Astoria,5 Av/59 St,M,True,N R W,Subway,40.764811,-73.973347,Queens,Downtown,0,0,0,,POINT (-73.973347 40.764811)
-1,R14,9,9,BMT,Broadway - Brighton,57 St-7 Av,M,True,N Q R W,Subway,40.764664,-73.980658,Uptown,Downtown,1,1,1,,POINT (-73.980658 40.764664)
-2,R15,10,10,BMT,Broadway - Brighton,49 St,M,True,N R W,Subway,40.759901,-73.984139,Uptown,Downtown,2,1,0,Uptown only,POINT (-73.984139 40.759901)
-3,R16,11,611,BMT,Broadway - Brighton,Times Sq-42 St,M,True,N Q R W,Subway,40.754672,-73.986754,Uptown,Downtown,1,1,1,,POINT (-73.986754 40.754672)
-4,R17,12,607,BMT,Broadway - Brighton,34 St-Herald Sq,M,True,N Q R W,Subway,40.749567,-73.98795,Uptown,Downtown,1,1,1,,POINT (-73.98795 40.749567)
-5,R18,13,13,BMT,Broadway - Brighton,28 St,M,True,R W,Subway,40.745494,-73.988691,Uptown,Downtown,0,0,0,,POINT (-73.988691 40.745494)
-6,R19,14,14,BMT,Broadway - Brighton,23 St,M,True,R W,Subway,40.741303,-73.989344,Uptown,Downtown,0,0,0,,POINT (-73.989344 40.741303)
-7,R20,15,602,BMT,Broadway - Brighton,14 St-Union Sq,M,True,N Q R W,Subway,40.735736,-73.990568,Uptown,Downtown,1,1,1,,POINT (-73.990568 40.735736)
-8,R21,16,16,BMT,Broadway - Brighton,8 St-NYU,M,True,R W,Subway,40.730328,-73.992629,Uptown,Downtown,0,0,0,,POINT (-73.992629 40.730328)
-9,R22,17,17,BMT,Broadway - Brighton,Prince St,M,True,R W,Subway,40.724329,-73.997702,Uptown,Downtown,0,0,0,,POINT (-73.997702 40.724329)
-10,R23,18,623,BMT,Broadway,Canal St,M,True,R W,Subway,40.719527,-74.001775,Uptown,Downtown,0,0,0,,POINT (-74.001775 40.719527)
-11,Q01,19,623,BMT,Manhattan Bridge,Canal St,M,True,N Q,Subway,40.718383,-74.00046,Uptown,Downtown,0,0,0,,POINT (-74.00046 40.718383)
-12,R24,20,20,BMT,Broadway,City Hall,M,True,R W,Subway,40.713282,-74.006978,Uptown,Downtown,0,0,0,,POINT (-74.006978 40.713282)
-13,R25,21,624,BMT,Broadway,Cortlandt St,M,True,R W,Subway,40.710668,-74.011029,Uptown,Downtown,1,1,1,,POINT (-74.011029 40.710668)
-14,R26,22,22,BMT,Broadway,Rector St,M,True,R W,Subway,40.70722,-74.013342,Uptown,Downtown,0,0,0,,POINT (-74.013342 40.70722)
-15,R27,23,635,BMT,Broadway,Whitehall St-South Ferry,M,True,R W,Subway,40.703087,-74.012994,Uptown,Downtown,0,0,0,,POINT (-74.012994 40.703087)
-16,M18,102,625,BMT,Jamaica,Delancey St-Essex St,M,True,M J Z,Subway,40.718315,-73.987437,Brooklyn,Inbound,0,0,0,,POINT (-73.987437 40.718315)
-17,M19,103,103,BMT,Jamaica,Bowery,M,True,J Z,Subway,40.72028,-73.993915,Brooklyn,Downtown,0,0,0,,POINT (-73.993915 40.72028)
-18,M20,104,623,BMT,Jamaica,Canal St,M,True,J Z,Subway,40.718092,-73.999892,Brooklyn,Downtown,0,0,0,,POINT (-73.999892 40.718092)
-19,M21,105,622,BMT,Jamaica,Chambers St,M,True,J Z,Subway,40.713243,-74.003401,Brooklyn,Downtown,1,1,1,,POINT (-74.003401 40.713243)
-20,M22,106,628,BMT,Jamaica,Fulton St,M,True,J Z,Subway,40.710374,-74.007582,Brooklyn,Downtown,1,1,1,,POINT (-74.007582 40.710374)
-21,M23,107,107,BMT,Jamaica,Broad St,M,True,J Z,Subway,40.706476,-74.011056,Brooklyn,Last Stop,0,0,0,,POINT (-74.011056 40.706476)
-22,L01,115,618,BMT,Canarsie,8 Av,M,True,L,Subway,40.739777,-74.002578,Last Stop,Brooklyn,1,1,1,,POINT (-74.002578 40.739777)
-23,L02,116,601,BMT,Canarsie,6 Av,M,True,L,Subway,40.737335,-73.996786,West Side,Brooklyn,1,1,1,,POINT (-73.996786 40.737335)
-24,L03,117,602,BMT,Canarsie,14 St-Union Sq,M,True,L,Subway,40.734789,-73.99073,West Side,Brooklyn,1,1,1,,POINT (-73.99073 40.734789)
-25,L05,118,118,BMT,Canarsie,3 Av,M,True,L,Subway,40.732849,-73.986122,West Side,Brooklyn,0,0,0,,POINT (-73.986122 40.732849)
-26,L06,119,119,BMT,Canarsie,1 Av,M,True,L,Subway,40.730953,-73.981628,West Side,Brooklyn,1,1,1,,POINT (-73.981628 40.730953)
-27,A25,162,162,IND,8th Av - Fulton St,50 St,M,True,C E,Subway,40.762456,-73.985984,Uptown,Downtown,2,0,1,Downtown only,POINT (-73.985984 40.762456)
-28,A27,163,611,IND,8th Av - Fulton St,42 St-Port Authority Bus Terminal,M,True,A C E,Subway,40.757308,-73.989735,Uptown,Downtown,1,1,1,,POINT (-73.989735 40.757308)
-29,A28,164,164,IND,8th Av - Fulton St,34 St-Penn Station,M,True,A C E,Subway,40.752287,-73.993391,Uptown,Downtown,1,1,1,,POINT (-73.993391 40.752287)
-30,A30,165,165,IND,8th Av - Fulton St,23 St,M,True,C E,Subway,40.745906,-73.998041,Uptown,Downtown,0,0,0,,POINT (-73.998041 40.745906)
-31,A31,166,618,IND,8th Av - Fulton St,14 St,M,True,A C E,Subway,40.740893,-74.00169,Uptown,Downtown,1,1,1,,POINT (-74.00169 40.740893)
-32,A32,167,167,IND,8th Av - Fulton St,W 4 St-Wash Sq,M,True,A C E,Subway,40.732338,-74.000495,Uptown,Downtown,1,1,1,,POINT (-74.000495 40.732338)
-33,D20,167,167,IND,6th Av - Culver,W 4 St-Wash Sq,M,True,B D F M,Subway,40.732338,-74.000495,Uptown,Downtown,1,1,1,,POINT (-74.000495 40.732338)
-34,A33,168,168,IND,8th Av - Fulton St,Spring St,M,True,C E,Subway,40.726227,-74.003739,Uptown,Downtown,0,0,0,,POINT (-74.003739 40.726227)
-35,A34,169,169,IND,8th Av - Fulton St,Canal St,M,True,A C E,Subway,40.720824,-74.005229,Uptown,Downtown,0,0,0,,POINT (-74.005229 40.720824)
-36,A36,170,624,IND,8th Av - Fulton St,Chambers St,M,True,A C,Subway,40.714111,-74.008585,Uptown,Brooklyn,0,0,0,,POINT (-74.008585 40.714111)
-37,E01,171,624,IND,8th Av - Fulton St,World Trade Center,M,True,E,Subway,40.712582,-74.009781,Uptown,Last Stop,1,1,1,,POINT (-74.009781 40.712582)
-38,A38,172,628,IND,8th Av - Fulton St,Fulton St,M,True,A C,Subway,40.710197,-74.007691,Uptown,Brooklyn,1,1,1,,POINT (-74.007691 40.710197)
-39,B10,224,224,IND,6th Av - Culver,57 St,M,True,F,Subway,40.763972,-73.97745,Uptown,Downtown,0,0,0,,POINT (-73.97745 40.763972)
-40,D15,225,225,IND,6th Av - Culver,47-50 Sts-Rockefeller Ctr,M,True,B D F M,Subway,40.758663,-73.981329,Uptown,Downtown,1,1,1,,POINT (-73.981329 40.758663)
-41,D16,226,609,IND,6th Av - Culver,42 St-Bryant Pk,M,True,B D F M,Subway,40.754222,-73.984569,Uptown,Downtown,0,0,0,,POINT (-73.984569 40.754222)
-42,D17,227,607,IND,6th Av - Culver,34 St-Herald Sq,M,True,B D F M,Subway,40.749719,-73.987823,Uptown,Downtown,1,1,1,,POINT (-73.987823 40.749719)
-43,D18,228,228,IND,6th Av - Culver,23 St,M,True,F M,Subway,40.742878,-73.992821,Uptown,Downtown,0,0,0,,POINT (-73.992821 40.742878)
-44,D19,229,601,IND,6th Av - Culver,14 St,M,True,F M,Subway,40.738228,-73.996209,Uptown,Downtown,2,1,0,Uptown only,POINT (-73.996209 40.738228)
-45,D21,230,619,IND,6th Av - Culver,Broadway-Lafayette St,M,True,B D F M,Subway,40.725297,-73.996204,Uptown,Downtown,1,1,1,,POINT (-73.996204 40.725297)
-46,D22,231,231,IND,6th Av - Culver,Grand St,M,True,B D,Subway,40.718267,-73.993753,Uptown,Brooklyn,0,0,0,,POINT (-73.993753 40.718267)
-47,F14,232,232,IND,6th Av - Culver,2 Av,M,True,F,Subway,40.723402,-73.989938,Uptown,Downtown,0,0,0,,POINT (-73.989938 40.723402)
-48,F15,233,625,IND,6th Av - Culver,Delancey St-Essex St,M,True,F,Subway,40.718611,-73.988114,Uptown,Brooklyn,0,0,0,,POINT (-73.988114 40.718611)
-49,F16,234,234,IND,6th Av - Culver,East Broadway,M,True,F,Subway,40.713715,-73.990173,Uptown,Brooklyn,0,0,0,,POINT (-73.990173 40.713715)
-50,F11,275,612,IND,Queens Blvd,Lexington Av/53 St,M,True,E M,Subway,40.757552,-73.969055,Queens,Downtown,1,1,1,,POINT (-73.969055 40.757552)
-51,F12,276,276,IND,Queens Blvd,5 Av/53 St,M,True,E M,Subway,40.760167,-73.975224,Queens,Downtown,0,0,0,,POINT (-73.975224 40.760167)
-52,D14,277,277,IND,Queens Blvd,7 Av,M,True,E B D,Subway,40.762862,-73.981637,Outbound,Downtown,0,0,0,,POINT (-73.981637 40.762862)
-53,126,316,316,IRT,Broadway - 7Av,50 St,M,True,1,Subway,40.761728,-73.983849,Uptown,Downtown,0,0,0,,POINT (-73.983849 40.761728)
-54,127,317,611,IRT,Broadway - 7Av,Times Sq-42 St,M,True,1 2 3,Subway,40.75529,-73.987495,Uptown,Downtown,1,1,1,,POINT (-73.987495 40.75529)
-55,128,318,318,IRT,Broadway - 7Av,34 St-Penn Station,M,True,1 2 3,Subway,40.750373,-73.991057,Uptown,Downtown,1,1,1,,POINT (-73.991057 40.750373)
-56,129,319,319,IRT,Broadway - 7Av,28 St,M,True,1,Subway,40.747215,-73.993365,Uptown,Downtown,0,0,0,,POINT (-73.993365 40.747215)
-57,130,320,320,IRT,Broadway - 7Av,23 St,M,True,1,Subway,40.744081,-73.995657,Uptown,Downtown,0,0,0,,POINT (-73.995657 40.744081)
-58,131,321,321,IRT,Broadway - 7Av,18 St,M,True,1,Subway,40.74104,-73.997871,Uptown,Downtown,0,0,0,,POINT (-73.997871 40.74104)
-59,132,322,601,IRT,Broadway - 7Av,14 St,M,True,1 2 3,Subway,40.737826,-74.000201,Uptown,Downtown,0,0,0,,POINT (-74.000201 40.737826)
-60,133,323,323,IRT,Broadway - 7Av,Christopher St-Stonewall,M,True,1,Subway,40.733422,-74.002906,Uptown,Downtown,0,0,0,,POINT (-74.002906 40.733422)
-61,134,324,324,IRT,Broadway - 7Av,Houston St,M,True,1,Subway,40.728251,-74.005367,Uptown,Downtown,0,0,0,,POINT (-74.005367 40.728251)
-62,135,325,325,IRT,Broadway - 7Av,Canal St,M,True,1,Subway,40.722854,-74.006277,Uptown,Downtown,0,0,0,,POINT (-74.006277 40.722854)
-63,136,326,326,IRT,Broadway - 7Av,Franklin St,M,True,1,Subway,40.719318,-74.006886,Uptown,Downtown,0,0,0,,POINT (-74.006886 40.719318)
-64,137,327,327,IRT,Broadway - 7Av,Chambers St,M,True,1 2 3,Subway,40.715478,-74.009266,Uptown,Downtown,1,1,1,,POINT (-74.009266 40.715478)
-65,138,328,328,IRT,Broadway - 7Av,WTC Cortlandt,M,True,1,Subway,40.711835,-74.012188,Uptown,Downtown,1,1,1,,POINT (-74.012188 40.711835)
-66,139,329,329,IRT,Broadway - 7Av,Rector St,M,True,1,Subway,40.707513,-74.013783,Uptown,Downtown,0,0,0,,POINT (-74.013783 40.707513)
-67,142,330,635,IRT,Broadway - 7Av,South Ferry,M,True,1,Subway,40.702068,-74.013664,Uptown,Last Stop,1,1,1,,POINT (-74.013664 40.702068)
-68,228,331,624,IRT,Clark St,Park Place,M,True,2 3,Subway,40.713051,-74.008811,Uptown,Brooklyn,0,0,0,,POINT (-74.008811 40.713051)
-69,229,332,628,IRT,Clark St,Fulton St,M,True,2 3,Subway,40.709416,-74.006571,Uptown,Brooklyn,1,1,1,,POINT (-74.006571 40.709416)
-70,230,333,333,IRT,Clark St,Wall St,M,True,2 3,Subway,40.706821,-74.0091,Uptown,Brooklyn,0,0,0,,POINT (-74.0091 40.706821)
-71,630,401,612,IRT,Lexington Av,51 St,M,True,6,Subway,40.757107,-73.97192,Uptown,Downtown,1,1,1,,POINT (-73.97192 40.757107)
-72,632,403,403,IRT,Lexington Av,33 St,M,True,6,Subway,40.746081,-73.982076,Uptown,Downtown,0,0,0,,POINT (-73.982076 40.746081)
-73,633,404,404,IRT,Lexington Av,28 St,M,True,6,Subway,40.74307,-73.984264,Uptown,Downtown,2,0,1,Downtown only,POINT (-73.984264 40.74307)
-74,634,405,405,IRT,Lexington Av,23 St,M,True,6,Subway,40.739864,-73.986599,Uptown,Downtown,1,1,1,,POINT (-73.986599 40.739864)
-75,635,406,602,IRT,Lexington Av,14 St-Union Sq,M,True,4 5 6,Subway,40.734673,-73.989951,Uptown,Downtown,0,0,0,,POINT (-73.989951 40.734673)
-76,636,407,407,IRT,Lexington Av,Astor Pl,M,True,6,Subway,40.730054,-73.99107,Uptown,Downtown,0,0,0,,POINT (-73.99107 40.730054)
-77,637,408,619,IRT,Lexington Av,Bleecker St,M,True,6,Subway,40.725915,-73.994659,Uptown,Downtown,1,1,1,,POINT (-73.994659 40.725915)
-78,638,409,409,IRT,Lexington Av,Spring St,M,True,6,Subway,40.722301,-73.997141,Uptown,Downtown,0,0,0,,POINT (-73.997141 40.722301)
-79,639,410,623,IRT,Lexington Av,Canal St,M,True,6,Subway,40.718803,-74.000193,Uptown,Downtown,1,1,1,,POINT (-74.000193 40.718803)
-80,640,411,622,IRT,Lexington Av,Brooklyn Bridge-City Hall,M,True,4 5 6,Subway,40.713065,-74.004131,Uptown,Downtown,1,1,1,,POINT (-74.004131 40.713065)
-81,418,412,628,IRT,Lexington Av,Fulton St,M,True,4 5,Subway,40.710368,-74.009509,Uptown,Downtown,1,1,1,,POINT (-74.009509 40.710368)
-82,419,413,413,IRT,Lexington Av,Wall St,M,True,4 5,Subway,40.707557,-74.011862,Uptown,Downtown,0,0,0,,POINT (-74.011862 40.707557)
-83,420,414,414,IRT,Lexington Av,Bowling Green,M,True,4 5,Subway,40.704817,-74.014065,Uptown,Downtown,1,1,1,,POINT (-74.014065 40.704817)
-84,724,466,609,IRT,Flushing,5 Av,M,True,7,Subway,40.753821,-73.981963,Queens,Hudson Yards,0,0,0,,POINT (-73.981963 40.753821)
-85,725,467,611,IRT,Flushing,Times Sq-42 St,M,True,7,Subway,40.755477,-73.987691,Queens,Hudson Yards,1,1,1,,POINT (-73.987691 40.755477)
-86,902,468,611,IRT,Lexington - Shuttle,Times Sq-42 St,M,True,S,Subway,40.755983,-73.986229,Last Stop,Grand Central,1,1,1,,POINT (-73.986229 40.755983)
-87,726,471,471,IRT,Flushing,34 St-Hudson Yards,M,True,7,Subway,40.755882,-74.00191,Last Stop,Queens,1,1,1,,POINT (-74.00191 40.755882)
-88,,,,,,Lexington Av/59 St -- 59 St,M,True,N R W 4 5 6,,40.762592999999995,-73.9676125,,,,,,,
-89,,,,,,59 St-Columbus Circle,M,True,A C B D 1,,40.7682715,-73.9818325,Uptown,Downtown,,,,,
-90,,,,,,Grand Central-42 St,M,True,4 5 6 7 S,,40.751992,-73.97735933333333,,,,,,,
+,Complex ID,Is Complex,Number Of Stations In Complex,Stop Name,Display Name,Constituent Station Names,Station IDs,GTFS Stop IDs,Borough,CBD,Daytime Routes,Structure Type,Latitude,Longitude,ADA,ADA Notes
+6,8,False,1,5 Av/59 St,5 Av/59 St (N R W),5 Av/59 St,8,R13,M,True,N R W,Subway,40.764811,-73.973347,0,
+7,9,False,1,57 St-7 Av,57 St-7 Av (N Q R W),57 St-7 Av,9,R14,M,True,N Q R W,Subway,40.764664,-73.980658,1,
+8,10,False,1,49 St,49 St (N R W),49 St,10,R15,M,True,N R W,Subway,40.759901,-73.984139,2,Uptown only
+9,13,False,1,28 St,28 St (R W),28 St,13,R18,M,True,R W,Subway,40.745494,-73.988691,0,
+10,14,False,1,23 St,23 St (R W),23 St,14,R19,M,True,R W,Subway,40.741303,-73.989344,0,
+11,16,False,1,8 St-NYU,8 St-NYU (R W),8 St-NYU,16,R21,M,True,R W,Subway,40.730328,-73.992629,0,
+12,17,False,1,Prince St,Prince St (R W),Prince St,17,R22,M,True,R W,Subway,40.724329,-73.997702,0,
+13,20,False,1,City Hall,City Hall (R W),City Hall,20,R24,M,True,R W,Subway,40.713282,-74.006978,0,
+14,22,False,1,Rector St,Rector St (R W),Rector St,22,R26,M,True,R W,Subway,40.70722,-74.013342,0,
+85,103,False,1,Bowery,Bowery (J Z),Bowery,103,M19,M,True,J Z,Subway,40.72028,-73.993915,0,
+86,107,False,1,Broad St,Broad St (J Z),Broad St,107,M23,M,True,J Z,Subway,40.706476,-74.011056,0,
+93,118,False,1,3 Av,3 Av (L),3 Av,118,L05,M,True,L,Subway,40.732849,-73.986122,0,
+94,119,False,1,1 Av,1 Av (L),1 Av,119,L06,M,True,L,Subway,40.730953,-73.981628,1,
+129,162,False,1,50 St,50 St (C E),50 St,162,A25,M,True,C E,Subway,40.762456,-73.985984,2,Downtown only
+130,164,False,1,34 St-Penn Station,34 St-Penn Station (A C E),34 St-Penn Station,164,A28,M,True,A C E,Subway,40.752287,-73.993391,1,
+131,165,False,1,23 St,23 St (C E),23 St,165,A30,M,True,C E,Subway,40.745906,-73.998041,0,
+132,167,False,2,W 4 St-Wash Sq,W 4 St-Wash Sq (A C E B D F M),W 4 St-Wash Sq,167,A32; D20,M,True,A C E B D F M,Subway,40.732338,-74.000495,1,
+133,168,False,1,Spring St,Spring St (C E),Spring St,168,A33,M,True,C E,Subway,40.726227,-74.003739,0,
+134,169,False,1,Canal St,Canal St (A C E),Canal St,169,A34,M,True,A C E,Subway,40.720824,-74.005229,0,
+182,224,False,1,57 St,57 St (F),57 St,224,B10,M,True,F,Subway,40.763972,-73.97745,0,
+183,225,False,1,47-50 Sts-Rockefeller Ctr,47-50 Sts-Rockefeller Ctr (B D F M),47-50 Sts-Rockefeller Ctr,225,D15,M,True,B D F M,Subway,40.758663,-73.981329,1,
+184,228,False,1,23 St,23 St (F M),23 St,228,D18,M,True,F M,Subway,40.742878,-73.992821,0,
+185,231,False,1,Grand St,Grand St (B D),Grand St,231,D22,M,True,B D,Subway,40.718267,-73.993753,0,
+186,232,False,1,2 Av,2 Av (F),2 Av,232,F14,M,True,F,Subway,40.723402,-73.989938,0,
+187,234,False,1,East Broadway,East Broadway (F),East Broadway,234,F16,M,True,F,Subway,40.713715,-73.990173,0,
+225,276,False,1,5 Av/53 St,5 Av/53 St (E M),5 Av/53 St,276,F12,M,True,E M,Subway,40.760167,-73.975224,0,
+226,277,False,1,7 Av,7 Av (E B D),7 Av,277,D14,M,True,E B D,Subway,40.762862,-73.981637,0,
+261,316,False,1,50 St,50 St (1),50 St,316,126,M,True,1,Subway,40.761728,-73.983849,0,
+262,318,False,1,34 St-Penn Station,34 St-Penn Station (1 2 3),34 St-Penn Station,318,128,M,True,1 2 3,Subway,40.750373,-73.991057,1,
+263,319,False,1,28 St,28 St (1),28 St,319,129,M,True,1,Subway,40.747215,-73.993365,0,
+264,320,False,1,23 St,23 St (1),23 St,320,130,M,True,1,Subway,40.744081,-73.995657,0,
+265,321,False,1,18 St,18 St (1),18 St,321,131,M,True,1,Subway,40.74104,-73.997871,0,
+266,323,False,1,Christopher St-Stonewall,Christopher St-Stonewall (1),Christopher St-Stonewall,323,133,M,True,1,Subway,40.733422,-74.002906,0,
+267,324,False,1,Houston St,Houston St (1),Houston St,324,134,M,True,1,Subway,40.728251,-74.005367,0,
+268,325,False,1,Canal St,Canal St (1),Canal St,325,135,M,True,1,Subway,40.722854,-74.006277,0,
+269,326,False,1,Franklin St,Franklin St (1),Franklin St,326,136,M,True,1,Subway,40.719318,-74.006886,0,
+270,327,False,1,Chambers St,Chambers St (1 2 3),Chambers St,327,137,M,True,1 2 3,Subway,40.715478,-74.009266,1,
+271,328,False,1,WTC Cortlandt,WTC Cortlandt (1),WTC Cortlandt,328,138,M,True,1,Subway,40.711835,-74.012188,1,
+272,329,False,1,Rector St,Rector St (1),Rector St,329,139,M,True,1,Subway,40.707513,-74.013783,0,
+273,333,False,1,Wall St,Wall St (2 3),Wall St,333,230,M,True,2 3,Subway,40.706821,-74.0091,0,
+335,403,False,1,33 St,33 St (6),33 St,403,632,M,True,6,Subway,40.746081,-73.982076,0,
+336,404,False,1,28 St,28 St (6),28 St,404,633,M,True,6,Subway,40.74307,-73.984264,2,Downtown only
+337,405,False,1,23 St,23 St (6),23 St,405,634,M,True,6,Subway,40.739864,-73.986599,1,
+338,407,False,1,Astor Pl,Astor Pl (6),Astor Pl,407,636,M,True,6,Subway,40.730054,-73.99107,0,
+339,409,False,1,Spring St,Spring St (6),Spring St,409,638,M,True,6,Subway,40.722301,-73.997141,0,
+340,413,False,1,Wall St,Wall St (4 5),Wall St,413,419,M,True,4 5,Subway,40.707557,-74.011862,0,
+341,414,False,1,Bowling Green,Bowling Green (4 5),Bowling Green,414,420,M,True,4 5,Subway,40.704817,-74.014065,1,
+388,471,False,1,34 St-Hudson Yards,34 St-Hudson Yards (7),34 St-Hudson Yards,471,726,M,True,7,Subway,40.755882,-74.00191,1,
+413,601,True,3,14 St/6 Av,14 St/6 Av (1 2 3 L F M),14 St; 6 Av,116; 229; 322,132; D19; L02,M,True,1 2 3 L F M,Subway,40.73779633,-73.997732,2,L accessible; F M Uptown only; 1 2 3 not accessible
+414,602,True,3,14 St-Union Sq,14 St-Union Sq (4 5 6 L N Q R W),14 St-Union Sq,15; 117; 406,635; L03; R20,M,True,4 5 6 L N Q R W,Subway,40.735066,-73.99041633,2,N Q R W accessible; L accessible; 4 5 6 not accessible
+419,607,True,2,34 St-Herald Sq,34 St-Herald Sq (B D F M N Q R W),34 St-Herald Sq,12; 227,D17; R17,M,True,B D F M N Q R W,Subway,40.749643,-73.9878865,1,
+421,609,True,2,42 St-Bryant Pk/5 Av,42 St-Bryant Pk/5 Av (7 B D F M),42 St-Bryant Pk; 5 Av,226; 466,724; D16,M,True,7 B D F M,Subway,40.7540215,-73.983266,0,
+422,610,True,3,Grand Central-42 St,Grand Central-42 St (4 5 6 7 S),Grand Central-42 St,402; 465; 469,631; 723; 901,M,True,4 5 6 7 S,Subway,40.751992,-73.97735933,1,
+423,611,True,5,Times Sq-42 St/Port Authority Bus Terminal,Times Sq-42 St/Port Authority Bus Terminal (1 2 3 7 A C E N Q R W S),42 St-Port Authority Bus Terminal; Times Sq-42 St,11; 163; 317; 467; 468,127; 725; 902; A27; R16,M,True,1 2 3 7 A C E N Q R W S,Subway,40.755746,-73.9875808,1,
+424,612,True,2,Lexington Av/51-53 Sts,Lexington Av/51-53 Sts (6 E M),51 St; Lexington Av/53 St,275; 401,630; F11,M,True,6 E M,Subway,40.7573295,-73.9704875,1,
+425,613,True,2,Lexington Av/59 St,Lexington Av/59 St (4 5 6 N R W),59 St; Lexington Av/59 St,7; 400,629; R11,M,True,4 5 6 N R W,Subway,40.762593,-73.9676125,0,
+426,614,True,2,59 St-Columbus Circle,59 St-Columbus Circle (1 A C B D),59 St-Columbus Circle,161; 315,125; A24,M,True,1 A C B D,Subway,40.7682715,-73.9818325,1,
+430,618,True,2,14 St/8 Av,14 St/8 Av (A C E L),14 St; 8 Av,115; 166,A31; L01,M,True,A C E L,Subway,40.740335,-74.002134,1,
+431,619,True,2,Broadway-Lafayette St/Bleecker St,Broadway-Lafayette St/Bleecker St (6 B D F M),Bleecker St; Broadway-Lafayette St,230; 408,637; D21,M,True,6 B D F M,Subway,40.725606,-73.9954315,1,
+434,622,True,2,Brooklyn Bridge-City Hall/Chambers St,Brooklyn Bridge-City Hall/Chambers St (4 5 6 J Z),Brooklyn Bridge-City Hall; Chambers St,105; 411,640; M21,M,True,4 5 6 J Z,Subway,40.713154,-74.003766,1,
+435,623,True,4,Canal St,Canal St (6 J Z N Q R W),Canal St,18; 19; 104; 410,639; M20; Q01; R23,M,True,6 J Z N Q R W,Subway,40.71870125,-74.00058,2,R W not accessible; N Q not accessible; J Z not accessible; 6 accessible
+436,624,True,4,Chambers St/WTC/Park Place/Cortlandt St,Chambers St/WTC/Park Place/Cortlandt St (2 3 A C E R W),Chambers St; Cortlandt St; Park Place; World Trade Center,21; 170; 171; 331,228; A36; E01; R25,M,True,2 3 A C E R W,Subway,40.712603,-74.0095515,2,R W accessible; A C not accessible; E accessible; 2 3 not accessible
+437,625,True,2,Delancey St-Essex St,Delancey St-Essex St (F M J Z),Delancey St-Essex St,102; 233,F15; M18,M,True,F M J Z,Subway,40.718463,-73.9877755,0,
+440,628,True,4,Fulton St,Fulton St (2 3 4 5 A C J Z),Fulton St,106; 172; 332; 412,229; 418; A38; M22,M,True,2 3 4 5 A C J Z,Subway,40.71008875,-74.00783825,1,
+443,635,True,2,Whitehall St-South Ferry,Whitehall St-South Ferry (1 R W),South Ferry; Whitehall St-South Ferry,23; 330,142; R27,M,True,1 R W,Subway,40.7025775,-74.013329,2,R W not accessible; 1 accessible
