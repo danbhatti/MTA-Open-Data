@@ -53,8 +53,8 @@ class Network:
             min_value = float('inf')
             for k in range(self.station_count):
                 # if the first neighbor hasn't been explored yet, make it the current node
-                if helper_dist_list[k] < min_value and helper_bool_list[k] == False:
-                    min_value = helper_dist_list[k]
+                if adjacency_list[k] < min_value and helper_bool_list[k] == False:
+                    min_value = adjacency_list[k]
                     curr_node = k
                     adjacency_list = self.adjacency_matrix[curr_node, :]
     

@@ -27,17 +27,28 @@ def main():
     b = working_graph.dijkstra('33 St')
     print(b)
 
-    norm = plt.Normalize(b.min(), b.max())
     
     geometry = [Point(xy) for xy in zip(working_data["Longitude"], 
                                         working_data["Latitude"])]
     
     station_points = gpd.GeoDataFrame(working_data, geometry=geometry, crs = {'init': 'epsg:2263'})
+    station_points['color'] = 'blue'
+    print(station_points.iloc[0,17])
+    for i in range(len(station_points)):
+        if b[i] == 0:
+            station_points.iloc[i,17] = 'black'
+        elif b[i] == 1:
+            station_points.iloc[i,17] = 'green'
+        elif b[i] == 2:
+            station_points.iloc[i,17] = 'yellow'
+        elif b[i] == 3:
+            station_points.iloc[i,17] = 'red'
+        
 
 
     # Plot nodes (station points) 
     fig, ax = plt.subplots()
-    station_points.plot(ax=ax, marker ='o', color=b, cmap='coolwarm', norm=norm)  # Plot nodes
+    station_points.plot(ax=ax, marker ='o', edgecolor = 'black', color = station_points['color'])  # Plot nodes
 
     # Optionally, you can customize the limits and titles
     ax.set_title("MTA CBD Subway Network")
