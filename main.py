@@ -24,7 +24,7 @@ def main():
     working_data = filter_data(df) # filters data based on filter_data method
     working_graph = graph.Network(working_data)
     working_data.to_csv('data/CBD_MTA_Subway_Stations')
-    b = working_graph.dijkstra('33 St')
+    b = working_graph.dijkstra('Bowling Green')
     print(b)
 
     
