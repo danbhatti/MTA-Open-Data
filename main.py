@@ -53,9 +53,9 @@ def plot_interactive_map(working_data, shortest_paths):
             color=station_color,
             fill=True,
             fill_opacity=0.7,
-            popup=f"Station: {working_data['Stop Name']}"
+            tooltip=f"Display Name: {working_data.iloc[i,4]}"
         ).add_to(subway_map)
-    subway_map.save('figures/interactive_subway_map.html')
+    subway_map.save('interactive_subway_map.html')
         
 
 def parse_args():
