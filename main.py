@@ -12,9 +12,6 @@ import folium
 import numpy as np
 import pandas as pd
 import graph
-from shapely.geometry import Point
-import geopandas as gpd
-import matplotlib.pyplot as plt
 
 def main():
     # this code is used to extract the relevant data from the .csv file, using command line arguments
