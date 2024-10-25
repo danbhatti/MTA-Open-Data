@@ -13,7 +13,6 @@ import numpy as np
 import pandas as pd
 import graph
 import requests
-from sodapy import Socrata
 
 
 def main():
@@ -22,25 +21,10 @@ def main():
     # https://data.seattle.gov/resource/kzjm-xkqj.json?$$app_token=APP_TOKEN
     results = requests.get('https://data.ny.gov/resource/5f5g-n3cz.json?$$app_token=5cNQYqwwGoXLCZfec7e7kJXEk').json()
     results_df = pd.DataFrame.from_records(results)
-    
     results_graph = graph.Network(results_df)
-
     shortest_paths = results_graph.dijkstra('33 St')
-
     plot_interactive_map(results_df, shortest_paths)
 
-    
-
-def get_station_color(distance):
-    if distance == 0:
-        return 'black'
-    elif distance == 1:
-        return 'green'
-    elif distance == 2:
-        return 'yellow'
-    elif distance == 3:
-        return 'red'
-    return '#0039A6'  # Default color
 
 
 def plot_interactive_map(working_data, shortest_paths):
@@ -58,16 +42,28 @@ def plot_interactive_map(working_data, shortest_paths):
             fill_opacity=0.7,
             #tooltip=f"Display Name: {working_data.iloc[i,4]}"
         ).add_to(subway_map)
+        ''''
         folium.Marker(
             location=(working_data.iloc[i,12], working_data.iloc[i,13]),
             popup=f"Display Name: {working_data.iloc[i,4]}",
             icon=folium.Icon(color="blue"),
         ).add_to(subway_map).add_child(folium.ClickForMarker())
-
+        '''
     # save the map as an HTML file
-    subway_map.save('interactive_subway_map.html')
+    subway_map.save('subway_map.html')
         
 
+
+def get_station_color(distance):
+    if distance == 0:
+        return 'black'
+    elif distance == 1:
+        return 'green'
+    elif distance == 2:
+        return 'yellow'
+    elif distance == 3:
+        return 'red'
+    return '#0039A6'  # Default color
 
 def parse_args():
     """Parse command line arguments (build-graph files)."""
@@ -76,7 +72,9 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-
+def filter_data(data):
+    refinement = data[data['CBD'] == True] # this filters for just stops in the CDB    
+    return refinement
 
 def read_csv(filename):
     """Read .csv into graph format"""
