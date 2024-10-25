@@ -12,17 +12,23 @@ import folium
 import numpy as np
 import pandas as pd
 import graph
+import requests
+from sodapy import Socrata
+
 
 def main():
     # this code is used to extract the relevant data from the .csv file, using command line arguments
-    args = parse_args()
-    network_data = args.network_filename
-    df = pd.read_csv(network_data)
-    working_data = filter_data(df) # filters data based on filter_data method
-    working_graph = graph.Network(working_data)
-    working_data.to_csv('data/CBD_MTA_Subway_Stations')
-    shortest_paths = working_graph.dijkstra('33 St')
-    plot_interactive_map(working_data, shortest_paths)
+    # example of making an API request using the app token
+    # https://data.seattle.gov/resource/kzjm-xkqj.json?$$app_token=APP_TOKEN
+    results = requests.get('https://data.ny.gov/resource/5f5g-n3cz.json?$$app_token=5cNQYqwwGoXLCZfec7e7kJXEk').json()
+    results_df = pd.DataFrame.from_records(results)
+    
+    results_graph = graph.Network(results_df)
+
+    shortest_paths = results_graph.dijkstra('33 St')
+
+    plot_interactive_map(results_df, shortest_paths)
+
     
 
 def get_station_color(distance):
@@ -38,8 +44,8 @@ def get_station_color(distance):
 
 
 def plot_interactive_map(working_data, shortest_paths):
-    # Create a base map centered around NYC
-    map_center = [working_data['Latitude'].mean(), working_data['Longitude'].mean()]
+    # create a base map centered around NYC
+    map_center = [40.776676, -73.971321]
     subway_map = folium.Map(location=map_center, zoom_start=12)
 
     for i in range(len(shortest_paths)):
@@ -62,19 +68,13 @@ def plot_interactive_map(working_data, shortest_paths):
     subway_map.save('interactive_subway_map.html')
         
 
+
 def parse_args():
     """Parse command line arguments (build-graph files)."""
     parser = argparse.ArgumentParser(description='parsing command line arguments')
     parser.add_argument('network_filename', help='path to build-graph file')
     args = parser.parse_args()
     return args
-
-
-
-def filter_data(data):
-    refinement = data[data['CBD'] == True] # this filters for just stops in the CDB    
-    return refinement
-
 
 
 

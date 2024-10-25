@@ -5,7 +5,7 @@ Description:
 """
 
 import numpy as np
-import heapq
+
 
 class Network:
 
@@ -59,16 +59,7 @@ class Network:
                     adjacency_list = self.adjacency_matrix[curr_node, :]
     
         return helper_dist_list
-                
-
-
-
-    
-
-
-
-
-
+            
 
     
     ## taken from Google search labs Generative AI, Oct 15 2024
