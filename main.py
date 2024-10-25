@@ -29,7 +29,7 @@ def main():
 
     plot_interactive_map(results_df, shortest_paths)
 
-    
+    print(results_graph.worst_performance())
 
 def get_station_color(distance):
     if distance == 0:

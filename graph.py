@@ -5,7 +5,7 @@ Description:
 """
 
 import numpy as np
-
+from statistics import mean
 
 class Network:
 
@@ -60,6 +60,7 @@ class Network:
     
         return helper_dist_list
             
+  
 
     
     ## taken from Google search labs Generative AI, Oct 15 2024
