@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_3a458ce21544361d06722a3ef55f525e {
+                #map_b91b8ac8dfd6b0b505adc460b06498ff {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_3a458ce21544361d06722a3ef55f525e" ></div>
+            <div class="folium-map" id="map_b91b8ac8dfd6b0b505adc460b06498ff" ></div>
         
 </body>
 <script>
     
     
-            var map_3a458ce21544361d06722a3ef55f525e = L.map(
-                "map_3a458ce21544361d06722a3ef55f525e",
+            var map_b91b8ac8dfd6b0b505adc460b06498ff = L.map(
+                "map_b91b8ac8dfd6b0b505adc460b06498ff",
                 {
                     center: [40.73506763584616, -73.99430604938463],
                     crs: L.CRS.EPSG3857,
@@ -60,923 +60,2873 @@
 
         
     
-            var tile_layer_4801606e714cd5e270242a341cd0abcc = L.tileLayer(
+            var tile_layer_5fd4d912feb5bd3ba12487a34e46a02a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_4801606e714cd5e270242a341cd0abcc.addTo(map_3a458ce21544361d06722a3ef55f525e);
+            tile_layer_5fd4d912feb5bd3ba12487a34e46a02a.addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            var circle_marker_13e332ec4d784045a03b1661ca8f973c = L.circleMarker(
+            var circle_marker_860cb5d43e83cdcb30378ce583598d03 = L.circleMarker(
                 [40.764811, -73.973347],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_13e332ec4d784045a03b1661ca8f973c.bindTooltip(
-                `<div>
-                     Display Name: 5 Av/59 St (N R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3 = L.marker(
+                [40.764811, -73.973347],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_9e6d57d2601b49c8cbce725a1212f6dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3.setIcon(icon_9e6d57d2601b49c8cbce725a1212f6dc);
         
     
-            var circle_marker_91518e949ef755ac6589e68236d4a219 = L.circleMarker(
+        var popup_2d2c3a5e0c52133e254caaed0d437849 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fc5d9d12a33d4ddfda7a76d1575e576 = $(`<div id="html_2fc5d9d12a33d4ddfda7a76d1575e576" style="width: 100.0%; height: 100.0%;">Display Name: 5 Av/59 St (N R W)</div>`)[0];
+                popup_2d2c3a5e0c52133e254caaed0d437849.setContent(html_2fc5d9d12a33d4ddfda7a76d1575e576);
+            
+        
+
+        marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3.bindPopup(popup_2d2c3a5e0c52133e254caaed0d437849)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_b30fbe5bb8e47c4dcf065ae6da3dcaa3.on('click', newMarker);
+            
+    
+            var circle_marker_488926de31142954d8989b1ee78b654d = L.circleMarker(
                 [40.764664, -73.980658],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_91518e949ef755ac6589e68236d4a219.bindTooltip(
-                `<div>
-                     Display Name: 57 St-7 Av (N Q R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_3b82e918e8fb600d83cbe4233a510e02 = L.marker(
+                [40.764664, -73.980658],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_07e7194d0fed604e4e45d0d1ec950777 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_3b82e918e8fb600d83cbe4233a510e02.setIcon(icon_07e7194d0fed604e4e45d0d1ec950777);
         
     
-            var circle_marker_a9bffd3a79915c3da4f319c4794786e2 = L.circleMarker(
+        var popup_ffe1ea874edc493ecbc3b1c77d5dd2b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f19cc9309ef17514449c11aa192926af = $(`<div id="html_f19cc9309ef17514449c11aa192926af" style="width: 100.0%; height: 100.0%;">Display Name: 57 St-7 Av (N Q R W)</div>`)[0];
+                popup_ffe1ea874edc493ecbc3b1c77d5dd2b3.setContent(html_f19cc9309ef17514449c11aa192926af);
+            
+        
+
+        marker_3b82e918e8fb600d83cbe4233a510e02.bindPopup(popup_ffe1ea874edc493ecbc3b1c77d5dd2b3)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_3b82e918e8fb600d83cbe4233a510e02);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_3b82e918e8fb600d83cbe4233a510e02.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_3b82e918e8fb600d83cbe4233a510e02.on('click', newMarker);
+            
+    
+            var circle_marker_190f6ee492ef03c613b4b5cd85eef18d = L.circleMarker(
                 [40.759901, -73.984139],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_a9bffd3a79915c3da4f319c4794786e2.bindTooltip(
-                `<div>
-                     Display Name: 49 St (N R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_b4726f372d854470f293553e7be260dc = L.marker(
+                [40.759901, -73.984139],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_823420e65ee306d26505bc12abe4ce81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_b4726f372d854470f293553e7be260dc.setIcon(icon_823420e65ee306d26505bc12abe4ce81);
         
     
-            var circle_marker_145e3fb75313a3234dde75e3641f39c9 = L.circleMarker(
+        var popup_d5fcaba9bc2f3d140de1770222c96c52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1165967a35e6aed4297a80c149ae11a = $(`<div id="html_a1165967a35e6aed4297a80c149ae11a" style="width: 100.0%; height: 100.0%;">Display Name: 49 St (N R W)</div>`)[0];
+                popup_d5fcaba9bc2f3d140de1770222c96c52.setContent(html_a1165967a35e6aed4297a80c149ae11a);
+            
+        
+
+        marker_b4726f372d854470f293553e7be260dc.bindPopup(popup_d5fcaba9bc2f3d140de1770222c96c52)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_b4726f372d854470f293553e7be260dc);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_b4726f372d854470f293553e7be260dc.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_b4726f372d854470f293553e7be260dc.on('click', newMarker);
+            
+    
+            var circle_marker_7fbd6bbe88d608795bb66fc7f9630208 = L.circleMarker(
                 [40.745494, -73.988691],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_145e3fb75313a3234dde75e3641f39c9.bindTooltip(
-                `<div>
-                     Display Name: 28 St (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_830facbac71c06fa06eb713573695348 = L.marker(
+                [40.745494, -73.988691],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_881c22a53ea2100afb175d73c0cf9f68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_830facbac71c06fa06eb713573695348.setIcon(icon_881c22a53ea2100afb175d73c0cf9f68);
         
     
-            var circle_marker_679d1199688bf8bf717d21e4d3d90f5d = L.circleMarker(
+        var popup_effb70cabc6b124f63520754c1fa3574 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1ca5b163c3ad1b4799d52f5ba426259 = $(`<div id="html_f1ca5b163c3ad1b4799d52f5ba426259" style="width: 100.0%; height: 100.0%;">Display Name: 28 St (R W)</div>`)[0];
+                popup_effb70cabc6b124f63520754c1fa3574.setContent(html_f1ca5b163c3ad1b4799d52f5ba426259);
+            
+        
+
+        marker_830facbac71c06fa06eb713573695348.bindPopup(popup_effb70cabc6b124f63520754c1fa3574)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_830facbac71c06fa06eb713573695348);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_830facbac71c06fa06eb713573695348.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_830facbac71c06fa06eb713573695348.on('click', newMarker);
+            
+    
+            var circle_marker_f864962b6db4c355c82f21ba08c8176c = L.circleMarker(
                 [40.741303, -73.989344],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_679d1199688bf8bf717d21e4d3d90f5d.bindTooltip(
-                `<div>
-                     Display Name: 23 St (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_2f6e4b4a36bf83d93a56da28637ba7a9 = L.marker(
+                [40.741303, -73.989344],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_ad9e5981bc12267bbf5670fdf18c3826 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_2f6e4b4a36bf83d93a56da28637ba7a9.setIcon(icon_ad9e5981bc12267bbf5670fdf18c3826);
         
     
-            var circle_marker_a0e3a8e9c5da36fc214ede76526c069c = L.circleMarker(
+        var popup_af388333bd4e2f323daa487cc1aca44d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c698477ef27c14068c62794ccd9f761 = $(`<div id="html_5c698477ef27c14068c62794ccd9f761" style="width: 100.0%; height: 100.0%;">Display Name: 23 St (R W)</div>`)[0];
+                popup_af388333bd4e2f323daa487cc1aca44d.setContent(html_5c698477ef27c14068c62794ccd9f761);
+            
+        
+
+        marker_2f6e4b4a36bf83d93a56da28637ba7a9.bindPopup(popup_af388333bd4e2f323daa487cc1aca44d)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_2f6e4b4a36bf83d93a56da28637ba7a9);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_2f6e4b4a36bf83d93a56da28637ba7a9.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_2f6e4b4a36bf83d93a56da28637ba7a9.on('click', newMarker);
+            
+    
+            var circle_marker_0fc4bd3b556f9a22a45100cdb3c34fd8 = L.circleMarker(
                 [40.730328, -73.992629],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_a0e3a8e9c5da36fc214ede76526c069c.bindTooltip(
-                `<div>
-                     Display Name: 8 St-NYU (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_3cbb88cff783d20cf7e2f5d72a3b741b = L.marker(
+                [40.730328, -73.992629],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_a8cb5d8979447bb5e75782d5feebcaae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_3cbb88cff783d20cf7e2f5d72a3b741b.setIcon(icon_a8cb5d8979447bb5e75782d5feebcaae);
         
     
-            var circle_marker_341d0206d525412fa451b012ea726241 = L.circleMarker(
+        var popup_04b545e931c3949316dd3501e9149ed0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7732c6799f9cc66367212cc2f08141d3 = $(`<div id="html_7732c6799f9cc66367212cc2f08141d3" style="width: 100.0%; height: 100.0%;">Display Name: 8 St-NYU (R W)</div>`)[0];
+                popup_04b545e931c3949316dd3501e9149ed0.setContent(html_7732c6799f9cc66367212cc2f08141d3);
+            
+        
+
+        marker_3cbb88cff783d20cf7e2f5d72a3b741b.bindPopup(popup_04b545e931c3949316dd3501e9149ed0)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_3cbb88cff783d20cf7e2f5d72a3b741b);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_3cbb88cff783d20cf7e2f5d72a3b741b.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_3cbb88cff783d20cf7e2f5d72a3b741b.on('click', newMarker);
+            
+    
+            var circle_marker_888c68e6380c29e8eea97ceaad5dfa42 = L.circleMarker(
                 [40.724329, -73.997702],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_341d0206d525412fa451b012ea726241.bindTooltip(
-                `<div>
-                     Display Name: Prince St (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_38f09cab279f564b95a242c50154f9ac = L.marker(
+                [40.724329, -73.997702],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_44685a332338a92e398daf3f06568f95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_38f09cab279f564b95a242c50154f9ac.setIcon(icon_44685a332338a92e398daf3f06568f95);
         
     
-            var circle_marker_c6586cec50a8c5382f2b235ed426e9fc = L.circleMarker(
+        var popup_01eee53853f91b431fb875a358d42246 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5279ca9bb09ade24232544edd171323 = $(`<div id="html_a5279ca9bb09ade24232544edd171323" style="width: 100.0%; height: 100.0%;">Display Name: Prince St (R W)</div>`)[0];
+                popup_01eee53853f91b431fb875a358d42246.setContent(html_a5279ca9bb09ade24232544edd171323);
+            
+        
+
+        marker_38f09cab279f564b95a242c50154f9ac.bindPopup(popup_01eee53853f91b431fb875a358d42246)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_38f09cab279f564b95a242c50154f9ac);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_38f09cab279f564b95a242c50154f9ac.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_38f09cab279f564b95a242c50154f9ac.on('click', newMarker);
+            
+    
+            var circle_marker_3fc67f71af392009abb6f671302e2491 = L.circleMarker(
                 [40.713282, -74.006978],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_c6586cec50a8c5382f2b235ed426e9fc.bindTooltip(
-                `<div>
-                     Display Name: City Hall (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_eb5c730ff37480f83ce60641f1e40bb0 = L.marker(
+                [40.713282, -74.006978],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_ce68aa3d5576772024a2b0b3516f24dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_eb5c730ff37480f83ce60641f1e40bb0.setIcon(icon_ce68aa3d5576772024a2b0b3516f24dd);
         
     
-            var circle_marker_0195eaa4ea5aa825afb9d3e5e864198c = L.circleMarker(
+        var popup_1576e36f4f43c25ea236e74311c178de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7133dd9ec7bbf12bd4ce67c266df60d8 = $(`<div id="html_7133dd9ec7bbf12bd4ce67c266df60d8" style="width: 100.0%; height: 100.0%;">Display Name: City Hall (R W)</div>`)[0];
+                popup_1576e36f4f43c25ea236e74311c178de.setContent(html_7133dd9ec7bbf12bd4ce67c266df60d8);
+            
+        
+
+        marker_eb5c730ff37480f83ce60641f1e40bb0.bindPopup(popup_1576e36f4f43c25ea236e74311c178de)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_eb5c730ff37480f83ce60641f1e40bb0);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_eb5c730ff37480f83ce60641f1e40bb0.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_eb5c730ff37480f83ce60641f1e40bb0.on('click', newMarker);
+            
+    
+            var circle_marker_21067367fca0102625c9b54cd1e8bec0 = L.circleMarker(
                 [40.70722, -74.013342],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_0195eaa4ea5aa825afb9d3e5e864198c.bindTooltip(
-                `<div>
-                     Display Name: Rector St (R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_f3058a572e4fa34dfeec017956ad8e50 = L.marker(
+                [40.70722, -74.013342],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_0b483535d0111e268d25fc1141c0982e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_f3058a572e4fa34dfeec017956ad8e50.setIcon(icon_0b483535d0111e268d25fc1141c0982e);
         
     
-            var circle_marker_6b0bad802e561d29464e063450bc913c = L.circleMarker(
+        var popup_25b88bdbc843c66e8ef7b948480fdc18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd4c3ba835157475d6c520ad927649c6 = $(`<div id="html_dd4c3ba835157475d6c520ad927649c6" style="width: 100.0%; height: 100.0%;">Display Name: Rector St (R W)</div>`)[0];
+                popup_25b88bdbc843c66e8ef7b948480fdc18.setContent(html_dd4c3ba835157475d6c520ad927649c6);
+            
+        
+
+        marker_f3058a572e4fa34dfeec017956ad8e50.bindPopup(popup_25b88bdbc843c66e8ef7b948480fdc18)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_f3058a572e4fa34dfeec017956ad8e50);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_f3058a572e4fa34dfeec017956ad8e50.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_f3058a572e4fa34dfeec017956ad8e50.on('click', newMarker);
+            
+    
+            var circle_marker_b17f21acb663f8a1b0b772f1a9192221 = L.circleMarker(
                 [40.72028, -73.993915],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_6b0bad802e561d29464e063450bc913c.bindTooltip(
-                `<div>
-                     Display Name: Bowery (J Z)
-                 </div>`,
-                {"sticky": true}
+            var marker_8e950e86913a67433f99fcc65d35c282 = L.marker(
+                [40.72028, -73.993915],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_07854a8592dd4a51957e81955008828e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_8e950e86913a67433f99fcc65d35c282.setIcon(icon_07854a8592dd4a51957e81955008828e);
         
     
-            var circle_marker_6d7e9564d455d67b3155a7ef4765f5ed = L.circleMarker(
+        var popup_8337ff1a8ae7edf93014793903db6f9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7da41d32983835a0e2a58d8abb10ce68 = $(`<div id="html_7da41d32983835a0e2a58d8abb10ce68" style="width: 100.0%; height: 100.0%;">Display Name: Bowery (J Z)</div>`)[0];
+                popup_8337ff1a8ae7edf93014793903db6f9f.setContent(html_7da41d32983835a0e2a58d8abb10ce68);
+            
+        
+
+        marker_8e950e86913a67433f99fcc65d35c282.bindPopup(popup_8337ff1a8ae7edf93014793903db6f9f)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_8e950e86913a67433f99fcc65d35c282);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_8e950e86913a67433f99fcc65d35c282.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_8e950e86913a67433f99fcc65d35c282.on('click', newMarker);
+            
+    
+            var circle_marker_bee681190c4d9b765e152af69bd2059b = L.circleMarker(
                 [40.706476, -74.011056],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_6d7e9564d455d67b3155a7ef4765f5ed.bindTooltip(
-                `<div>
-                     Display Name: Broad St (J Z)
-                 </div>`,
-                {"sticky": true}
+            var marker_2e4cb1e594c97cc301d3b2bb18fac4a8 = L.marker(
+                [40.706476, -74.011056],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_8690b9524e86095410aeb09abe650799 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_2e4cb1e594c97cc301d3b2bb18fac4a8.setIcon(icon_8690b9524e86095410aeb09abe650799);
         
     
-            var circle_marker_a2c13a96190006d09fa3d44098c8dd36 = L.circleMarker(
+        var popup_36b623453433737841760e1175ef8640 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e1fc607ac2ce339f652b07bce1c3750 = $(`<div id="html_6e1fc607ac2ce339f652b07bce1c3750" style="width: 100.0%; height: 100.0%;">Display Name: Broad St (J Z)</div>`)[0];
+                popup_36b623453433737841760e1175ef8640.setContent(html_6e1fc607ac2ce339f652b07bce1c3750);
+            
+        
+
+        marker_2e4cb1e594c97cc301d3b2bb18fac4a8.bindPopup(popup_36b623453433737841760e1175ef8640)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_2e4cb1e594c97cc301d3b2bb18fac4a8);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_2e4cb1e594c97cc301d3b2bb18fac4a8.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_2e4cb1e594c97cc301d3b2bb18fac4a8.on('click', newMarker);
+            
+    
+            var circle_marker_83088b5c74af64f94f0d1262dff3b614 = L.circleMarker(
                 [40.732849, -73.986122],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_a2c13a96190006d09fa3d44098c8dd36.bindTooltip(
-                `<div>
-                     Display Name: 3 Av (L)
-                 </div>`,
-                {"sticky": true}
+            var marker_23434588ee838752a73bd823593192cc = L.marker(
+                [40.732849, -73.986122],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_5625bdb41e031ca8d8c6ea367a77cee6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_23434588ee838752a73bd823593192cc.setIcon(icon_5625bdb41e031ca8d8c6ea367a77cee6);
         
     
-            var circle_marker_df16ed31d560b1c08b134829d73da1ef = L.circleMarker(
+        var popup_7f64e33c5799749e2fc93562457396df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11970f0c650e4d6013eddcd0abc9e19e = $(`<div id="html_11970f0c650e4d6013eddcd0abc9e19e" style="width: 100.0%; height: 100.0%;">Display Name: 3 Av (L)</div>`)[0];
+                popup_7f64e33c5799749e2fc93562457396df.setContent(html_11970f0c650e4d6013eddcd0abc9e19e);
+            
+        
+
+        marker_23434588ee838752a73bd823593192cc.bindPopup(popup_7f64e33c5799749e2fc93562457396df)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_23434588ee838752a73bd823593192cc);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_23434588ee838752a73bd823593192cc.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_23434588ee838752a73bd823593192cc.on('click', newMarker);
+            
+    
+            var circle_marker_05db7e9810dd6f7191397eea2a70fc18 = L.circleMarker(
                 [40.730953, -73.981628],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_df16ed31d560b1c08b134829d73da1ef.bindTooltip(
-                `<div>
-                     Display Name: 1 Av (L)
-                 </div>`,
-                {"sticky": true}
+            var marker_843800c8b3dc878d423f181a23f8ba0b = L.marker(
+                [40.730953, -73.981628],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_f24f897c0bd55e91d020a6e11928acd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_843800c8b3dc878d423f181a23f8ba0b.setIcon(icon_f24f897c0bd55e91d020a6e11928acd4);
         
     
-            var circle_marker_344692c3f452220af411d97b66bc8a1d = L.circleMarker(
+        var popup_ab5b2329b26615d9fb8815b76174285f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a522ac22606426c4780c4f703fe3bf79 = $(`<div id="html_a522ac22606426c4780c4f703fe3bf79" style="width: 100.0%; height: 100.0%;">Display Name: 1 Av (L)</div>`)[0];
+                popup_ab5b2329b26615d9fb8815b76174285f.setContent(html_a522ac22606426c4780c4f703fe3bf79);
+            
+        
+
+        marker_843800c8b3dc878d423f181a23f8ba0b.bindPopup(popup_ab5b2329b26615d9fb8815b76174285f)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_843800c8b3dc878d423f181a23f8ba0b);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_843800c8b3dc878d423f181a23f8ba0b.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_843800c8b3dc878d423f181a23f8ba0b.on('click', newMarker);
+            
+    
+            var circle_marker_f9c942410a17d3531fd1e24ba928d87e = L.circleMarker(
                 [40.762456, -73.985984],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_344692c3f452220af411d97b66bc8a1d.bindTooltip(
-                `<div>
-                     Display Name: 50 St (C E)
-                 </div>`,
-                {"sticky": true}
+            var marker_28517c474f17811e5ace01fd62d1084f = L.marker(
+                [40.762456, -73.985984],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_1c37da5716d0c9c1994e9c64d53c8aa9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_28517c474f17811e5ace01fd62d1084f.setIcon(icon_1c37da5716d0c9c1994e9c64d53c8aa9);
         
     
-            var circle_marker_3599040e8e2cb5180f9320972fd9a5a7 = L.circleMarker(
+        var popup_daa8a84cf589bef6d64b0b22025ef45e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be29f37c9dec4e770eac96138735f7f4 = $(`<div id="html_be29f37c9dec4e770eac96138735f7f4" style="width: 100.0%; height: 100.0%;">Display Name: 50 St (C E)</div>`)[0];
+                popup_daa8a84cf589bef6d64b0b22025ef45e.setContent(html_be29f37c9dec4e770eac96138735f7f4);
+            
+        
+
+        marker_28517c474f17811e5ace01fd62d1084f.bindPopup(popup_daa8a84cf589bef6d64b0b22025ef45e)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_28517c474f17811e5ace01fd62d1084f);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_28517c474f17811e5ace01fd62d1084f.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_28517c474f17811e5ace01fd62d1084f.on('click', newMarker);
+            
+    
+            var circle_marker_f535d77531e8fae3a18e385bfef9fc16 = L.circleMarker(
                 [40.752287, -73.993391],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_3599040e8e2cb5180f9320972fd9a5a7.bindTooltip(
-                `<div>
-                     Display Name: 34 St-Penn Station (A C E)
-                 </div>`,
-                {"sticky": true}
+            var marker_412843605bfc9c3bf6f6598929e79291 = L.marker(
+                [40.752287, -73.993391],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_e7a5daf207fcb3bd908246980750b083 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_412843605bfc9c3bf6f6598929e79291.setIcon(icon_e7a5daf207fcb3bd908246980750b083);
         
     
-            var circle_marker_6976824eca4da3d6025dab680d8aac55 = L.circleMarker(
+        var popup_ab23c08dc6f9464339ef44af112b38b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0461397979663d5779cd61d874b94890 = $(`<div id="html_0461397979663d5779cd61d874b94890" style="width: 100.0%; height: 100.0%;">Display Name: 34 St-Penn Station (A C E)</div>`)[0];
+                popup_ab23c08dc6f9464339ef44af112b38b8.setContent(html_0461397979663d5779cd61d874b94890);
+            
+        
+
+        marker_412843605bfc9c3bf6f6598929e79291.bindPopup(popup_ab23c08dc6f9464339ef44af112b38b8)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_412843605bfc9c3bf6f6598929e79291);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_412843605bfc9c3bf6f6598929e79291.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_412843605bfc9c3bf6f6598929e79291.on('click', newMarker);
+            
+    
+            var circle_marker_3d85840fd9e4e940bea236f950edd08f = L.circleMarker(
                 [40.745906, -73.998041],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_6976824eca4da3d6025dab680d8aac55.bindTooltip(
-                `<div>
-                     Display Name: 23 St (C E)
-                 </div>`,
-                {"sticky": true}
+            var marker_bf0870f5ff55a39736f4a87831afb469 = L.marker(
+                [40.745906, -73.998041],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_fd591b05f90a63c4844a8a4eb61c9303 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_bf0870f5ff55a39736f4a87831afb469.setIcon(icon_fd591b05f90a63c4844a8a4eb61c9303);
         
     
-            var circle_marker_0d4ab64533d41deea548a81eaef61ec7 = L.circleMarker(
+        var popup_6c023d92bd4a4e5824e258bf191227fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a27410d01cb1596c229024a4f85b5df6 = $(`<div id="html_a27410d01cb1596c229024a4f85b5df6" style="width: 100.0%; height: 100.0%;">Display Name: 23 St (C E)</div>`)[0];
+                popup_6c023d92bd4a4e5824e258bf191227fa.setContent(html_a27410d01cb1596c229024a4f85b5df6);
+            
+        
+
+        marker_bf0870f5ff55a39736f4a87831afb469.bindPopup(popup_6c023d92bd4a4e5824e258bf191227fa)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_bf0870f5ff55a39736f4a87831afb469);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_bf0870f5ff55a39736f4a87831afb469.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_bf0870f5ff55a39736f4a87831afb469.on('click', newMarker);
+            
+    
+            var circle_marker_26e9cacbf45c0bdfb612ddf932a27f41 = L.circleMarker(
                 [40.732338, -74.000495],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_0d4ab64533d41deea548a81eaef61ec7.bindTooltip(
-                `<div>
-                     Display Name: W 4 St-Wash Sq (A C E B D F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_1de3365f0943ce372cd82bbbbf367666 = L.marker(
+                [40.732338, -74.000495],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_1e99da7b73f7a9a6d8f00a1ea9cb6943 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_1de3365f0943ce372cd82bbbbf367666.setIcon(icon_1e99da7b73f7a9a6d8f00a1ea9cb6943);
         
     
-            var circle_marker_3475877c5a814291971d39925315a04b = L.circleMarker(
+        var popup_ea56d2eba422f56a146372dff8dbc1ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1f64c17b2fded4b9eef873eb6443d24 = $(`<div id="html_e1f64c17b2fded4b9eef873eb6443d24" style="width: 100.0%; height: 100.0%;">Display Name: W 4 St-Wash Sq (A C E B D F M)</div>`)[0];
+                popup_ea56d2eba422f56a146372dff8dbc1ee.setContent(html_e1f64c17b2fded4b9eef873eb6443d24);
+            
+        
+
+        marker_1de3365f0943ce372cd82bbbbf367666.bindPopup(popup_ea56d2eba422f56a146372dff8dbc1ee)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_1de3365f0943ce372cd82bbbbf367666);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_1de3365f0943ce372cd82bbbbf367666.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_1de3365f0943ce372cd82bbbbf367666.on('click', newMarker);
+            
+    
+            var circle_marker_246fe98339608170d681ce86862348bd = L.circleMarker(
                 [40.726227, -74.003739],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_3475877c5a814291971d39925315a04b.bindTooltip(
-                `<div>
-                     Display Name: Spring St (C E)
-                 </div>`,
-                {"sticky": true}
+            var marker_a8c12f8355869b63f95408f5bb637189 = L.marker(
+                [40.726227, -74.003739],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_9ac17bbfa5c23d85022cddbdd3dc542f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_a8c12f8355869b63f95408f5bb637189.setIcon(icon_9ac17bbfa5c23d85022cddbdd3dc542f);
         
     
-            var circle_marker_4120b8f02f42ffe4c681529ec9b7cd55 = L.circleMarker(
+        var popup_e7acc0fb1abdb262c6a6255539378b90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99996e7eee4d0159bd6aa46c5772311d = $(`<div id="html_99996e7eee4d0159bd6aa46c5772311d" style="width: 100.0%; height: 100.0%;">Display Name: Spring St (C E)</div>`)[0];
+                popup_e7acc0fb1abdb262c6a6255539378b90.setContent(html_99996e7eee4d0159bd6aa46c5772311d);
+            
+        
+
+        marker_a8c12f8355869b63f95408f5bb637189.bindPopup(popup_e7acc0fb1abdb262c6a6255539378b90)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_a8c12f8355869b63f95408f5bb637189);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_a8c12f8355869b63f95408f5bb637189.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_a8c12f8355869b63f95408f5bb637189.on('click', newMarker);
+            
+    
+            var circle_marker_b5bfc8dd8cb71a200d602fb138c186eb = L.circleMarker(
                 [40.720824, -74.005229],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_4120b8f02f42ffe4c681529ec9b7cd55.bindTooltip(
-                `<div>
-                     Display Name: Canal St (A C E)
-                 </div>`,
-                {"sticky": true}
+            var marker_5cd0fafed6c3822f861d49beba3b5714 = L.marker(
+                [40.720824, -74.005229],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_8328d3dc967589580a267c05ad84a6e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_5cd0fafed6c3822f861d49beba3b5714.setIcon(icon_8328d3dc967589580a267c05ad84a6e3);
         
     
-            var circle_marker_58f6e096e0d381ffcf766a01b61b61af = L.circleMarker(
+        var popup_fdd7b3bf09ccf2dc9d09886c35408a85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0dfe50790e67fe4310a99d2d1bf66d6d = $(`<div id="html_0dfe50790e67fe4310a99d2d1bf66d6d" style="width: 100.0%; height: 100.0%;">Display Name: Canal St (A C E)</div>`)[0];
+                popup_fdd7b3bf09ccf2dc9d09886c35408a85.setContent(html_0dfe50790e67fe4310a99d2d1bf66d6d);
+            
+        
+
+        marker_5cd0fafed6c3822f861d49beba3b5714.bindPopup(popup_fdd7b3bf09ccf2dc9d09886c35408a85)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_5cd0fafed6c3822f861d49beba3b5714);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_5cd0fafed6c3822f861d49beba3b5714.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_5cd0fafed6c3822f861d49beba3b5714.on('click', newMarker);
+            
+    
+            var circle_marker_9de23286b5fd31b3c24932187dbf7e39 = L.circleMarker(
                 [40.763972, -73.97745],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_58f6e096e0d381ffcf766a01b61b61af.bindTooltip(
-                `<div>
-                     Display Name: 57 St (F)
-                 </div>`,
-                {"sticky": true}
+            var marker_4242bb3082ec55e9e60b640b3daee34c = L.marker(
+                [40.763972, -73.97745],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_b3a1f93f4fa9529efeade9437d5ec0eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_4242bb3082ec55e9e60b640b3daee34c.setIcon(icon_b3a1f93f4fa9529efeade9437d5ec0eb);
         
     
-            var circle_marker_40751563038364ba875bec8108bf52f1 = L.circleMarker(
+        var popup_8b4ca9bc790666241ec2fc2556631191 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb98e74c2a6d45d4a8c5de49f630c9ac = $(`<div id="html_bb98e74c2a6d45d4a8c5de49f630c9ac" style="width: 100.0%; height: 100.0%;">Display Name: 57 St (F)</div>`)[0];
+                popup_8b4ca9bc790666241ec2fc2556631191.setContent(html_bb98e74c2a6d45d4a8c5de49f630c9ac);
+            
+        
+
+        marker_4242bb3082ec55e9e60b640b3daee34c.bindPopup(popup_8b4ca9bc790666241ec2fc2556631191)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_4242bb3082ec55e9e60b640b3daee34c);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_4242bb3082ec55e9e60b640b3daee34c.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_4242bb3082ec55e9e60b640b3daee34c.on('click', newMarker);
+            
+    
+            var circle_marker_c1c57c7b2285d28bf0a771737f2f62d1 = L.circleMarker(
                 [40.758663, -73.981329],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_40751563038364ba875bec8108bf52f1.bindTooltip(
-                `<div>
-                     Display Name: 47-50 Sts-Rockefeller Ctr (B D F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_db713f72de2dd3e9672fa9d3f370d3a9 = L.marker(
+                [40.758663, -73.981329],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_ad5dace609d07c12b40d6edd205847e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_db713f72de2dd3e9672fa9d3f370d3a9.setIcon(icon_ad5dace609d07c12b40d6edd205847e9);
         
     
-            var circle_marker_5561465c2c64a09d9e4c9cbda5c89787 = L.circleMarker(
+        var popup_2b8fd99dd001100f961bb9a68707f983 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d54b977abfca6892c0fc4233f00646d6 = $(`<div id="html_d54b977abfca6892c0fc4233f00646d6" style="width: 100.0%; height: 100.0%;">Display Name: 47-50 Sts-Rockefeller Ctr (B D F M)</div>`)[0];
+                popup_2b8fd99dd001100f961bb9a68707f983.setContent(html_d54b977abfca6892c0fc4233f00646d6);
+            
+        
+
+        marker_db713f72de2dd3e9672fa9d3f370d3a9.bindPopup(popup_2b8fd99dd001100f961bb9a68707f983)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_db713f72de2dd3e9672fa9d3f370d3a9);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_db713f72de2dd3e9672fa9d3f370d3a9.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_db713f72de2dd3e9672fa9d3f370d3a9.on('click', newMarker);
+            
+    
+            var circle_marker_e124ef1d1224903d2d72d1d993fe4941 = L.circleMarker(
                 [40.742878, -73.992821],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_5561465c2c64a09d9e4c9cbda5c89787.bindTooltip(
-                `<div>
-                     Display Name: 23 St (F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_61f08db17f4584065ec2ada628d807d3 = L.marker(
+                [40.742878, -73.992821],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_63c4504639a5b048ae54f5ddd6859c30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_61f08db17f4584065ec2ada628d807d3.setIcon(icon_63c4504639a5b048ae54f5ddd6859c30);
         
     
-            var circle_marker_5b8bd35b338a159379a350dba83b945c = L.circleMarker(
+        var popup_82236ea92f96bb421a701c8a5891a986 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cff9e147f670bc18630ba0454909db7 = $(`<div id="html_5cff9e147f670bc18630ba0454909db7" style="width: 100.0%; height: 100.0%;">Display Name: 23 St (F M)</div>`)[0];
+                popup_82236ea92f96bb421a701c8a5891a986.setContent(html_5cff9e147f670bc18630ba0454909db7);
+            
+        
+
+        marker_61f08db17f4584065ec2ada628d807d3.bindPopup(popup_82236ea92f96bb421a701c8a5891a986)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_61f08db17f4584065ec2ada628d807d3);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_61f08db17f4584065ec2ada628d807d3.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_61f08db17f4584065ec2ada628d807d3.on('click', newMarker);
+            
+    
+            var circle_marker_1c78feb16cc424548b9e8509caa18b24 = L.circleMarker(
                 [40.718267, -73.993753],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_5b8bd35b338a159379a350dba83b945c.bindTooltip(
-                `<div>
-                     Display Name: Grand St (B D)
-                 </div>`,
-                {"sticky": true}
+            var marker_08787f646ae8b88145200204b465f447 = L.marker(
+                [40.718267, -73.993753],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_491e9dc0e7bf09d269c663e39a47bb61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_08787f646ae8b88145200204b465f447.setIcon(icon_491e9dc0e7bf09d269c663e39a47bb61);
         
     
-            var circle_marker_c35796177810c32ddbc66c3af89ff784 = L.circleMarker(
+        var popup_a9266dd38725dd463dee32f6fa8f03a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8387c3ea6ccee99ebe5f30c98f53032d = $(`<div id="html_8387c3ea6ccee99ebe5f30c98f53032d" style="width: 100.0%; height: 100.0%;">Display Name: Grand St (B D)</div>`)[0];
+                popup_a9266dd38725dd463dee32f6fa8f03a6.setContent(html_8387c3ea6ccee99ebe5f30c98f53032d);
+            
+        
+
+        marker_08787f646ae8b88145200204b465f447.bindPopup(popup_a9266dd38725dd463dee32f6fa8f03a6)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_08787f646ae8b88145200204b465f447);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_08787f646ae8b88145200204b465f447.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_08787f646ae8b88145200204b465f447.on('click', newMarker);
+            
+    
+            var circle_marker_a535bc2c432ad1773d33f392da76956a = L.circleMarker(
                 [40.723402, -73.989938],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_c35796177810c32ddbc66c3af89ff784.bindTooltip(
-                `<div>
-                     Display Name: 2 Av (F)
-                 </div>`,
-                {"sticky": true}
+            var marker_b89b9b485d44b620cc295c708cf54e29 = L.marker(
+                [40.723402, -73.989938],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_d0a445765a9e3fd71a8eb02c8ed36517 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_b89b9b485d44b620cc295c708cf54e29.setIcon(icon_d0a445765a9e3fd71a8eb02c8ed36517);
         
     
-            var circle_marker_0ebd8b1ac91ce0daea1dd062566c4ad2 = L.circleMarker(
+        var popup_9f23a98cd345983063b1ae2f9035e4f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a0604a00ff104ecd6b5a89c7b576868 = $(`<div id="html_5a0604a00ff104ecd6b5a89c7b576868" style="width: 100.0%; height: 100.0%;">Display Name: 2 Av (F)</div>`)[0];
+                popup_9f23a98cd345983063b1ae2f9035e4f4.setContent(html_5a0604a00ff104ecd6b5a89c7b576868);
+            
+        
+
+        marker_b89b9b485d44b620cc295c708cf54e29.bindPopup(popup_9f23a98cd345983063b1ae2f9035e4f4)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_b89b9b485d44b620cc295c708cf54e29);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_b89b9b485d44b620cc295c708cf54e29.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_b89b9b485d44b620cc295c708cf54e29.on('click', newMarker);
+            
+    
+            var circle_marker_a2b343566ddc8b734e4548bdffe1bf8b = L.circleMarker(
                 [40.713715, -73.990173],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_0ebd8b1ac91ce0daea1dd062566c4ad2.bindTooltip(
-                `<div>
-                     Display Name: East Broadway (F)
-                 </div>`,
-                {"sticky": true}
+            var marker_95844a34149fdc59e12545554b677a6d = L.marker(
+                [40.713715, -73.990173],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_2a7ce08c734f2562d3299b47398ea558 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_95844a34149fdc59e12545554b677a6d.setIcon(icon_2a7ce08c734f2562d3299b47398ea558);
         
     
-            var circle_marker_c8f1cf99654723110043525b1cf93c40 = L.circleMarker(
+        var popup_6c601e4c51e021e8458c3179728714ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_457f467df7c5003de84ed2d345055a14 = $(`<div id="html_457f467df7c5003de84ed2d345055a14" style="width: 100.0%; height: 100.0%;">Display Name: East Broadway (F)</div>`)[0];
+                popup_6c601e4c51e021e8458c3179728714ba.setContent(html_457f467df7c5003de84ed2d345055a14);
+            
+        
+
+        marker_95844a34149fdc59e12545554b677a6d.bindPopup(popup_6c601e4c51e021e8458c3179728714ba)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_95844a34149fdc59e12545554b677a6d);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_95844a34149fdc59e12545554b677a6d.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_95844a34149fdc59e12545554b677a6d.on('click', newMarker);
+            
+    
+            var circle_marker_59181705f1de1c654316b8f5d8733081 = L.circleMarker(
                 [40.760167, -73.975224],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_c8f1cf99654723110043525b1cf93c40.bindTooltip(
-                `<div>
-                     Display Name: 5 Av/53 St (E M)
-                 </div>`,
-                {"sticky": true}
+            var marker_540294d7512b0d851a93cc13492fc37a = L.marker(
+                [40.760167, -73.975224],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_c607d1974c67298c01f0d2c9eb5fc5ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_540294d7512b0d851a93cc13492fc37a.setIcon(icon_c607d1974c67298c01f0d2c9eb5fc5ca);
         
     
-            var circle_marker_65a0326b2196aeee103828d6364a8d3b = L.circleMarker(
+        var popup_4db48eb29c21ccdf40f76873ec6137a3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b5b614d4eb4a5548350c0d493665b43 = $(`<div id="html_1b5b614d4eb4a5548350c0d493665b43" style="width: 100.0%; height: 100.0%;">Display Name: 5 Av/53 St (E M)</div>`)[0];
+                popup_4db48eb29c21ccdf40f76873ec6137a3.setContent(html_1b5b614d4eb4a5548350c0d493665b43);
+            
+        
+
+        marker_540294d7512b0d851a93cc13492fc37a.bindPopup(popup_4db48eb29c21ccdf40f76873ec6137a3)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_540294d7512b0d851a93cc13492fc37a);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_540294d7512b0d851a93cc13492fc37a.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_540294d7512b0d851a93cc13492fc37a.on('click', newMarker);
+            
+    
+            var circle_marker_c446b17ca08ae1c041f5b9b467b1480d = L.circleMarker(
                 [40.762862, -73.981637],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_65a0326b2196aeee103828d6364a8d3b.bindTooltip(
-                `<div>
-                     Display Name: 7 Av (E B D)
-                 </div>`,
-                {"sticky": true}
+            var marker_c518a4d5bf6432c0b10e5d09a4306b1a = L.marker(
+                [40.762862, -73.981637],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_da91a0ee6cf690a58a4677bba5554780 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_c518a4d5bf6432c0b10e5d09a4306b1a.setIcon(icon_da91a0ee6cf690a58a4677bba5554780);
         
     
-            var circle_marker_d0441999b11829f803990552ed1eee4c = L.circleMarker(
+        var popup_64206da98d2513499ca779f63cb03a8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a062aab1ce7d3cf4dc395166220f48b = $(`<div id="html_2a062aab1ce7d3cf4dc395166220f48b" style="width: 100.0%; height: 100.0%;">Display Name: 7 Av (E B D)</div>`)[0];
+                popup_64206da98d2513499ca779f63cb03a8b.setContent(html_2a062aab1ce7d3cf4dc395166220f48b);
+            
+        
+
+        marker_c518a4d5bf6432c0b10e5d09a4306b1a.bindPopup(popup_64206da98d2513499ca779f63cb03a8b)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_c518a4d5bf6432c0b10e5d09a4306b1a);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_c518a4d5bf6432c0b10e5d09a4306b1a.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_c518a4d5bf6432c0b10e5d09a4306b1a.on('click', newMarker);
+            
+    
+            var circle_marker_caaa20554314fb94ebf077e0e22b8791 = L.circleMarker(
                 [40.761728, -73.983849],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_d0441999b11829f803990552ed1eee4c.bindTooltip(
-                `<div>
-                     Display Name: 50 St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_031b0d358c79be31f7cfffef0a0cdf13 = L.marker(
+                [40.761728, -73.983849],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_26945d45898487241edf06da5182f153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_031b0d358c79be31f7cfffef0a0cdf13.setIcon(icon_26945d45898487241edf06da5182f153);
         
     
-            var circle_marker_d110f857de5f1c36ad185121a0764bc9 = L.circleMarker(
+        var popup_90328d7170c703fd6dec113357bf3d47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_178720e6043db346b071c11141a53666 = $(`<div id="html_178720e6043db346b071c11141a53666" style="width: 100.0%; height: 100.0%;">Display Name: 50 St (1)</div>`)[0];
+                popup_90328d7170c703fd6dec113357bf3d47.setContent(html_178720e6043db346b071c11141a53666);
+            
+        
+
+        marker_031b0d358c79be31f7cfffef0a0cdf13.bindPopup(popup_90328d7170c703fd6dec113357bf3d47)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_031b0d358c79be31f7cfffef0a0cdf13);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_031b0d358c79be31f7cfffef0a0cdf13.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_031b0d358c79be31f7cfffef0a0cdf13.on('click', newMarker);
+            
+    
+            var circle_marker_cc8d3755efe4905d3e780b415329dd0c = L.circleMarker(
                 [40.750373, -73.991057],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_d110f857de5f1c36ad185121a0764bc9.bindTooltip(
-                `<div>
-                     Display Name: 34 St-Penn Station (1 2 3)
-                 </div>`,
-                {"sticky": true}
+            var marker_1d4da711a0b7142bb212edc307f01a72 = L.marker(
+                [40.750373, -73.991057],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_1cc97f79b458827bc7f06e7d2cb82b98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_1d4da711a0b7142bb212edc307f01a72.setIcon(icon_1cc97f79b458827bc7f06e7d2cb82b98);
         
     
-            var circle_marker_0f627be606a1a19e610fd9bb1f47145c = L.circleMarker(
+        var popup_fc04e1f9580c60a85a2cfd122e4c3508 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b4726f6e62c0aca2cf12401a95bbf7f = $(`<div id="html_6b4726f6e62c0aca2cf12401a95bbf7f" style="width: 100.0%; height: 100.0%;">Display Name: 34 St-Penn Station (1 2 3)</div>`)[0];
+                popup_fc04e1f9580c60a85a2cfd122e4c3508.setContent(html_6b4726f6e62c0aca2cf12401a95bbf7f);
+            
+        
+
+        marker_1d4da711a0b7142bb212edc307f01a72.bindPopup(popup_fc04e1f9580c60a85a2cfd122e4c3508)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_1d4da711a0b7142bb212edc307f01a72);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_1d4da711a0b7142bb212edc307f01a72.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_1d4da711a0b7142bb212edc307f01a72.on('click', newMarker);
+            
+    
+            var circle_marker_33f8ca0a40a4bee27ae97ec6202dfa3a = L.circleMarker(
                 [40.747215, -73.993365],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_0f627be606a1a19e610fd9bb1f47145c.bindTooltip(
-                `<div>
-                     Display Name: 28 St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_1b34dd2d367947466151b595fe08db96 = L.marker(
+                [40.747215, -73.993365],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_2ad1eecfb892dfb6a284b11c8f1a1909 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_1b34dd2d367947466151b595fe08db96.setIcon(icon_2ad1eecfb892dfb6a284b11c8f1a1909);
         
     
-            var circle_marker_16af3076855afb5927ca788bafe643b1 = L.circleMarker(
+        var popup_a13fa038c153b424a92fbb7a4aa8c027 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78ca2b358b09ba31a44d797556e3e33d = $(`<div id="html_78ca2b358b09ba31a44d797556e3e33d" style="width: 100.0%; height: 100.0%;">Display Name: 28 St (1)</div>`)[0];
+                popup_a13fa038c153b424a92fbb7a4aa8c027.setContent(html_78ca2b358b09ba31a44d797556e3e33d);
+            
+        
+
+        marker_1b34dd2d367947466151b595fe08db96.bindPopup(popup_a13fa038c153b424a92fbb7a4aa8c027)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_1b34dd2d367947466151b595fe08db96);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_1b34dd2d367947466151b595fe08db96.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_1b34dd2d367947466151b595fe08db96.on('click', newMarker);
+            
+    
+            var circle_marker_f2421f9048dac5ed2c0b4144db1ddd55 = L.circleMarker(
                 [40.744081, -73.995657],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_16af3076855afb5927ca788bafe643b1.bindTooltip(
-                `<div>
-                     Display Name: 23 St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_502ae4c1ba828d1f07e2214858cc01b6 = L.marker(
+                [40.744081, -73.995657],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_42ce01c4f5b52653405e9a7cf3e81314 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_502ae4c1ba828d1f07e2214858cc01b6.setIcon(icon_42ce01c4f5b52653405e9a7cf3e81314);
         
     
-            var circle_marker_50160d1c94784656fec3ba470951ca5c = L.circleMarker(
+        var popup_1eb89f4df8a3658e81024859059aa4b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f98918a2064a143b32fcab4e52db234 = $(`<div id="html_7f98918a2064a143b32fcab4e52db234" style="width: 100.0%; height: 100.0%;">Display Name: 23 St (1)</div>`)[0];
+                popup_1eb89f4df8a3658e81024859059aa4b6.setContent(html_7f98918a2064a143b32fcab4e52db234);
+            
+        
+
+        marker_502ae4c1ba828d1f07e2214858cc01b6.bindPopup(popup_1eb89f4df8a3658e81024859059aa4b6)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_502ae4c1ba828d1f07e2214858cc01b6);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_502ae4c1ba828d1f07e2214858cc01b6.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_502ae4c1ba828d1f07e2214858cc01b6.on('click', newMarker);
+            
+    
+            var circle_marker_7953e64a3e9c45e00a95b3f92209e4f7 = L.circleMarker(
                 [40.74104, -73.997871],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_50160d1c94784656fec3ba470951ca5c.bindTooltip(
-                `<div>
-                     Display Name: 18 St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_de00067c07abbfc5900dac25fa99d77d = L.marker(
+                [40.74104, -73.997871],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_4ac84ab7290bdc1badc21fc36a2d3d19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_de00067c07abbfc5900dac25fa99d77d.setIcon(icon_4ac84ab7290bdc1badc21fc36a2d3d19);
         
     
-            var circle_marker_1047346aa8a9240747ffbb4392a3a744 = L.circleMarker(
+        var popup_707e79e0e1387a833465ce60eb2ad7a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00ed2bef9d2a41197ff5e82604fa2ad9 = $(`<div id="html_00ed2bef9d2a41197ff5e82604fa2ad9" style="width: 100.0%; height: 100.0%;">Display Name: 18 St (1)</div>`)[0];
+                popup_707e79e0e1387a833465ce60eb2ad7a9.setContent(html_00ed2bef9d2a41197ff5e82604fa2ad9);
+            
+        
+
+        marker_de00067c07abbfc5900dac25fa99d77d.bindPopup(popup_707e79e0e1387a833465ce60eb2ad7a9)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_de00067c07abbfc5900dac25fa99d77d);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_de00067c07abbfc5900dac25fa99d77d.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_de00067c07abbfc5900dac25fa99d77d.on('click', newMarker);
+            
+    
+            var circle_marker_7b799f39b525e9a052f6a23b749e6ba9 = L.circleMarker(
                 [40.733422, -74.002906],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_1047346aa8a9240747ffbb4392a3a744.bindTooltip(
-                `<div>
-                     Display Name: Christopher St-Stonewall (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_01b6a79e242fc298f7636952b81fbe9b = L.marker(
+                [40.733422, -74.002906],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_73d6483cb949830ff25867ca9814ed14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_01b6a79e242fc298f7636952b81fbe9b.setIcon(icon_73d6483cb949830ff25867ca9814ed14);
         
     
-            var circle_marker_d21ac40472e50541365f3f16bd19943a = L.circleMarker(
+        var popup_c24f14028abbd6dc31ae17677908b12a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60d98e6f66be131f28bdd98e4b0ca4ca = $(`<div id="html_60d98e6f66be131f28bdd98e4b0ca4ca" style="width: 100.0%; height: 100.0%;">Display Name: Christopher St-Stonewall (1)</div>`)[0];
+                popup_c24f14028abbd6dc31ae17677908b12a.setContent(html_60d98e6f66be131f28bdd98e4b0ca4ca);
+            
+        
+
+        marker_01b6a79e242fc298f7636952b81fbe9b.bindPopup(popup_c24f14028abbd6dc31ae17677908b12a)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_01b6a79e242fc298f7636952b81fbe9b);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_01b6a79e242fc298f7636952b81fbe9b.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_01b6a79e242fc298f7636952b81fbe9b.on('click', newMarker);
+            
+    
+            var circle_marker_f5cfeaf6ee6d4eae5f111e2e4cf9890d = L.circleMarker(
                 [40.728251, -74.005367],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_d21ac40472e50541365f3f16bd19943a.bindTooltip(
-                `<div>
-                     Display Name: Houston St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_235685f0d1ee224db6413883cf9c95af = L.marker(
+                [40.728251, -74.005367],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_49d6cdc9f8d0b736047f000798b9cd42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_235685f0d1ee224db6413883cf9c95af.setIcon(icon_49d6cdc9f8d0b736047f000798b9cd42);
         
     
-            var circle_marker_047af84c21b3189ce1c0f46d17bf9e22 = L.circleMarker(
+        var popup_8542104d7eb0db77ea5dba9893bd4c15 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62d4096b2f612fe477aa5b2493ea975a = $(`<div id="html_62d4096b2f612fe477aa5b2493ea975a" style="width: 100.0%; height: 100.0%;">Display Name: Houston St (1)</div>`)[0];
+                popup_8542104d7eb0db77ea5dba9893bd4c15.setContent(html_62d4096b2f612fe477aa5b2493ea975a);
+            
+        
+
+        marker_235685f0d1ee224db6413883cf9c95af.bindPopup(popup_8542104d7eb0db77ea5dba9893bd4c15)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_235685f0d1ee224db6413883cf9c95af);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_235685f0d1ee224db6413883cf9c95af.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_235685f0d1ee224db6413883cf9c95af.on('click', newMarker);
+            
+    
+            var circle_marker_1ce06c1a8fa41d390744ba030bf35bcc = L.circleMarker(
                 [40.722854, -74.006277],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_047af84c21b3189ce1c0f46d17bf9e22.bindTooltip(
-                `<div>
-                     Display Name: Canal St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_f97c133b1aa4e45cf310ccc10829bd13 = L.marker(
+                [40.722854, -74.006277],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_aa753f9c7b3143db140d75e9831a597a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_f97c133b1aa4e45cf310ccc10829bd13.setIcon(icon_aa753f9c7b3143db140d75e9831a597a);
         
     
-            var circle_marker_9d492c65fe57beb566034d701204a5ab = L.circleMarker(
+        var popup_2c527779ca9a037eaad8c722a2f7aac2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de62aec3a7a238a22b63c37ec8ca0151 = $(`<div id="html_de62aec3a7a238a22b63c37ec8ca0151" style="width: 100.0%; height: 100.0%;">Display Name: Canal St (1)</div>`)[0];
+                popup_2c527779ca9a037eaad8c722a2f7aac2.setContent(html_de62aec3a7a238a22b63c37ec8ca0151);
+            
+        
+
+        marker_f97c133b1aa4e45cf310ccc10829bd13.bindPopup(popup_2c527779ca9a037eaad8c722a2f7aac2)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_f97c133b1aa4e45cf310ccc10829bd13);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_f97c133b1aa4e45cf310ccc10829bd13.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_f97c133b1aa4e45cf310ccc10829bd13.on('click', newMarker);
+            
+    
+            var circle_marker_c235e7d2f5be961037638d4090418ce3 = L.circleMarker(
                 [40.719318, -74.006886],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_9d492c65fe57beb566034d701204a5ab.bindTooltip(
-                `<div>
-                     Display Name: Franklin St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_699f4044deeead894de9e41275ddfb86 = L.marker(
+                [40.719318, -74.006886],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_858f03c56017aae2a96424037b2f174a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_699f4044deeead894de9e41275ddfb86.setIcon(icon_858f03c56017aae2a96424037b2f174a);
         
     
-            var circle_marker_8390bc49338050f08edfe7610c0f156b = L.circleMarker(
+        var popup_edd30b4ed373d43e0e08397b29c2ab94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4590721fb2ef59b0902efbb496833a7f = $(`<div id="html_4590721fb2ef59b0902efbb496833a7f" style="width: 100.0%; height: 100.0%;">Display Name: Franklin St (1)</div>`)[0];
+                popup_edd30b4ed373d43e0e08397b29c2ab94.setContent(html_4590721fb2ef59b0902efbb496833a7f);
+            
+        
+
+        marker_699f4044deeead894de9e41275ddfb86.bindPopup(popup_edd30b4ed373d43e0e08397b29c2ab94)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_699f4044deeead894de9e41275ddfb86);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_699f4044deeead894de9e41275ddfb86.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_699f4044deeead894de9e41275ddfb86.on('click', newMarker);
+            
+    
+            var circle_marker_1a15a063fa060cc32b04ea6a392f34d1 = L.circleMarker(
                 [40.715478, -74.009266],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_8390bc49338050f08edfe7610c0f156b.bindTooltip(
-                `<div>
-                     Display Name: Chambers St (1 2 3)
-                 </div>`,
-                {"sticky": true}
+            var marker_d11c25d2bf9d4f07aed39134e68c9a67 = L.marker(
+                [40.715478, -74.009266],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_85efd3214128ebbf88dee75b86490fed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_d11c25d2bf9d4f07aed39134e68c9a67.setIcon(icon_85efd3214128ebbf88dee75b86490fed);
         
     
-            var circle_marker_88ae74bbac0c09f8faa191e90d3c9ad8 = L.circleMarker(
+        var popup_300f681e59c9b0f69c05bfc414830471 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_672bf88fe19ccc34727c5568b9910433 = $(`<div id="html_672bf88fe19ccc34727c5568b9910433" style="width: 100.0%; height: 100.0%;">Display Name: Chambers St (1 2 3)</div>`)[0];
+                popup_300f681e59c9b0f69c05bfc414830471.setContent(html_672bf88fe19ccc34727c5568b9910433);
+            
+        
+
+        marker_d11c25d2bf9d4f07aed39134e68c9a67.bindPopup(popup_300f681e59c9b0f69c05bfc414830471)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_d11c25d2bf9d4f07aed39134e68c9a67);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_d11c25d2bf9d4f07aed39134e68c9a67.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_d11c25d2bf9d4f07aed39134e68c9a67.on('click', newMarker);
+            
+    
+            var circle_marker_ea48a2ce076d2c61e74322ed9ec103ad = L.circleMarker(
                 [40.711835, -74.012188],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_88ae74bbac0c09f8faa191e90d3c9ad8.bindTooltip(
-                `<div>
-                     Display Name: WTC Cortlandt (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_b788cf0d0f73cbbd280a30eb9836602d = L.marker(
+                [40.711835, -74.012188],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_3e01c492c84b2a2f1d4df2afd634f9b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_b788cf0d0f73cbbd280a30eb9836602d.setIcon(icon_3e01c492c84b2a2f1d4df2afd634f9b9);
         
     
-            var circle_marker_0590d66615ab58f2e74cf372cb3bee86 = L.circleMarker(
+        var popup_12d5ebb7aaa3dc6593d7c1978a32d9c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43b8e18577ef1751511061ad9a829d41 = $(`<div id="html_43b8e18577ef1751511061ad9a829d41" style="width: 100.0%; height: 100.0%;">Display Name: WTC Cortlandt (1)</div>`)[0];
+                popup_12d5ebb7aaa3dc6593d7c1978a32d9c9.setContent(html_43b8e18577ef1751511061ad9a829d41);
+            
+        
+
+        marker_b788cf0d0f73cbbd280a30eb9836602d.bindPopup(popup_12d5ebb7aaa3dc6593d7c1978a32d9c9)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_b788cf0d0f73cbbd280a30eb9836602d);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_b788cf0d0f73cbbd280a30eb9836602d.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_b788cf0d0f73cbbd280a30eb9836602d.on('click', newMarker);
+            
+    
+            var circle_marker_734fad986524aa1b0133ca1c64bfeafb = L.circleMarker(
                 [40.707513, -74.013783],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_0590d66615ab58f2e74cf372cb3bee86.bindTooltip(
-                `<div>
-                     Display Name: Rector St (1)
-                 </div>`,
-                {"sticky": true}
+            var marker_6583a5b642a96db59a9a8b2aa57e8800 = L.marker(
+                [40.707513, -74.013783],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_523635bd1c5ba9a707f9217f513d2997 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_6583a5b642a96db59a9a8b2aa57e8800.setIcon(icon_523635bd1c5ba9a707f9217f513d2997);
         
     
-            var circle_marker_45b7a922c080c925ab148109d78e5999 = L.circleMarker(
+        var popup_2eac32b645e2238398b473013b0cee9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cbe4381ce43dace0b927ad490951175 = $(`<div id="html_3cbe4381ce43dace0b927ad490951175" style="width: 100.0%; height: 100.0%;">Display Name: Rector St (1)</div>`)[0];
+                popup_2eac32b645e2238398b473013b0cee9d.setContent(html_3cbe4381ce43dace0b927ad490951175);
+            
+        
+
+        marker_6583a5b642a96db59a9a8b2aa57e8800.bindPopup(popup_2eac32b645e2238398b473013b0cee9d)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_6583a5b642a96db59a9a8b2aa57e8800);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_6583a5b642a96db59a9a8b2aa57e8800.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_6583a5b642a96db59a9a8b2aa57e8800.on('click', newMarker);
+            
+    
+            var circle_marker_d264f533792e3ba03ee2d203de5dc3e8 = L.circleMarker(
                 [40.706821, -74.0091],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_45b7a922c080c925ab148109d78e5999.bindTooltip(
-                `<div>
-                     Display Name: Wall St (2 3)
-                 </div>`,
-                {"sticky": true}
+            var marker_248db8a03459ab95c8b8772d90a282cd = L.marker(
+                [40.706821, -74.0091],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_f8dbfad04a79737dcebc9721be42e4a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_248db8a03459ab95c8b8772d90a282cd.setIcon(icon_f8dbfad04a79737dcebc9721be42e4a5);
         
     
-            var circle_marker_ec21fac205aed396ff208b5ce18e5760 = L.circleMarker(
+        var popup_f30f94fbb78ff89468e9519082bd6d53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b572fe6076522bc4d51b6889784ea67e = $(`<div id="html_b572fe6076522bc4d51b6889784ea67e" style="width: 100.0%; height: 100.0%;">Display Name: Wall St (2 3)</div>`)[0];
+                popup_f30f94fbb78ff89468e9519082bd6d53.setContent(html_b572fe6076522bc4d51b6889784ea67e);
+            
+        
+
+        marker_248db8a03459ab95c8b8772d90a282cd.bindPopup(popup_f30f94fbb78ff89468e9519082bd6d53)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_248db8a03459ab95c8b8772d90a282cd);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_248db8a03459ab95c8b8772d90a282cd.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_248db8a03459ab95c8b8772d90a282cd.on('click', newMarker);
+            
+    
+            var circle_marker_90d9587e7bced86401d6fcc11e944f9f = L.circleMarker(
                 [40.746081, -73.982076],
                 {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_ec21fac205aed396ff208b5ce18e5760.bindTooltip(
-                `<div>
-                     Display Name: 33 St (6)
-                 </div>`,
-                {"sticky": true}
+            var marker_16fe35723e5fdf7b995f04b2a1ad2a24 = L.marker(
+                [40.746081, -73.982076],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_49c3dd8aba37f288a01c3cc219e38f2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_16fe35723e5fdf7b995f04b2a1ad2a24.setIcon(icon_49c3dd8aba37f288a01c3cc219e38f2d);
         
     
-            var circle_marker_394c09a5809d10a43aabfc91f7bdef8a = L.circleMarker(
+        var popup_6f396874c7ae34d509037c900a23733d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ab343cb26c46f43f9da87c60832016f = $(`<div id="html_3ab343cb26c46f43f9da87c60832016f" style="width: 100.0%; height: 100.0%;">Display Name: 33 St (6)</div>`)[0];
+                popup_6f396874c7ae34d509037c900a23733d.setContent(html_3ab343cb26c46f43f9da87c60832016f);
+            
+        
+
+        marker_16fe35723e5fdf7b995f04b2a1ad2a24.bindPopup(popup_6f396874c7ae34d509037c900a23733d)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_16fe35723e5fdf7b995f04b2a1ad2a24);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_16fe35723e5fdf7b995f04b2a1ad2a24.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_16fe35723e5fdf7b995f04b2a1ad2a24.on('click', newMarker);
+            
+    
+            var circle_marker_35b09732e68730e51e3ffcf2ac4bd96c = L.circleMarker(
                 [40.74307, -73.984264],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_394c09a5809d10a43aabfc91f7bdef8a.bindTooltip(
-                `<div>
-                     Display Name: 28 St (6)
-                 </div>`,
-                {"sticky": true}
+            var marker_43f7dc4d2d091cbb3a697e25c9233a07 = L.marker(
+                [40.74307, -73.984264],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_648b75a93246a05cf3d99456e509e425 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_43f7dc4d2d091cbb3a697e25c9233a07.setIcon(icon_648b75a93246a05cf3d99456e509e425);
         
     
-            var circle_marker_3ba9fdc312bad5d15aaf4b3e91bd1c3c = L.circleMarker(
+        var popup_c59ba7767026db701983acaa863f1e71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4086318b2ca4727879ef672114740ef = $(`<div id="html_f4086318b2ca4727879ef672114740ef" style="width: 100.0%; height: 100.0%;">Display Name: 28 St (6)</div>`)[0];
+                popup_c59ba7767026db701983acaa863f1e71.setContent(html_f4086318b2ca4727879ef672114740ef);
+            
+        
+
+        marker_43f7dc4d2d091cbb3a697e25c9233a07.bindPopup(popup_c59ba7767026db701983acaa863f1e71)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_43f7dc4d2d091cbb3a697e25c9233a07);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_43f7dc4d2d091cbb3a697e25c9233a07.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_43f7dc4d2d091cbb3a697e25c9233a07.on('click', newMarker);
+            
+    
+            var circle_marker_27d2c8fe0b4014f01d300f3282a83f47 = L.circleMarker(
                 [40.739864, -73.986599],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_3ba9fdc312bad5d15aaf4b3e91bd1c3c.bindTooltip(
-                `<div>
-                     Display Name: 23 St (6)
-                 </div>`,
-                {"sticky": true}
+            var marker_9695e48fc4a0ea82b69bed7af8ce548f = L.marker(
+                [40.739864, -73.986599],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_72392e90846409dcd38b6d43f0dd9f22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_9695e48fc4a0ea82b69bed7af8ce548f.setIcon(icon_72392e90846409dcd38b6d43f0dd9f22);
         
     
-            var circle_marker_e2bcc41e382630e4c9ffe36c140f929d = L.circleMarker(
+        var popup_5d81107d5372f071c6d3e9e252f3da00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63724e2173678bc994f3af59434b0f86 = $(`<div id="html_63724e2173678bc994f3af59434b0f86" style="width: 100.0%; height: 100.0%;">Display Name: 23 St (6)</div>`)[0];
+                popup_5d81107d5372f071c6d3e9e252f3da00.setContent(html_63724e2173678bc994f3af59434b0f86);
+            
+        
+
+        marker_9695e48fc4a0ea82b69bed7af8ce548f.bindPopup(popup_5d81107d5372f071c6d3e9e252f3da00)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_9695e48fc4a0ea82b69bed7af8ce548f);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_9695e48fc4a0ea82b69bed7af8ce548f.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_9695e48fc4a0ea82b69bed7af8ce548f.on('click', newMarker);
+            
+    
+            var circle_marker_09df8a15c9e9d9c97f1b94421ecd7f78 = L.circleMarker(
                 [40.730054, -73.99107],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_e2bcc41e382630e4c9ffe36c140f929d.bindTooltip(
-                `<div>
-                     Display Name: Astor Pl (6)
-                 </div>`,
-                {"sticky": true}
+            var marker_6c6a54d6cab06de44af3f0723395d2d8 = L.marker(
+                [40.730054, -73.99107],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_4be2001cbfd81ee6a90b02badf0d1e05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_6c6a54d6cab06de44af3f0723395d2d8.setIcon(icon_4be2001cbfd81ee6a90b02badf0d1e05);
         
     
-            var circle_marker_b41f1963d0612cb1c96d97e5a87e5936 = L.circleMarker(
+        var popup_bb0b3c4d0d5616ce99eb25acc022b313 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aac149401e8f3a446329f935b8382432 = $(`<div id="html_aac149401e8f3a446329f935b8382432" style="width: 100.0%; height: 100.0%;">Display Name: Astor Pl (6)</div>`)[0];
+                popup_bb0b3c4d0d5616ce99eb25acc022b313.setContent(html_aac149401e8f3a446329f935b8382432);
+            
+        
+
+        marker_6c6a54d6cab06de44af3f0723395d2d8.bindPopup(popup_bb0b3c4d0d5616ce99eb25acc022b313)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_6c6a54d6cab06de44af3f0723395d2d8);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_6c6a54d6cab06de44af3f0723395d2d8.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_6c6a54d6cab06de44af3f0723395d2d8.on('click', newMarker);
+            
+    
+            var circle_marker_ce0a9e0cf467fbded8d68f06c24fa38a = L.circleMarker(
                 [40.722301, -73.997141],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_b41f1963d0612cb1c96d97e5a87e5936.bindTooltip(
-                `<div>
-                     Display Name: Spring St (6)
-                 </div>`,
-                {"sticky": true}
+            var marker_5f54f9f1cce33333302a52b467285115 = L.marker(
+                [40.722301, -73.997141],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_865ef593c304706a00edc9ab6da0fa75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_5f54f9f1cce33333302a52b467285115.setIcon(icon_865ef593c304706a00edc9ab6da0fa75);
         
     
-            var circle_marker_3865a225509fb23b7beab4e86166327c = L.circleMarker(
+        var popup_459619fe155fbf9570d6b7628ca26e1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2636cd6b789c4f1659037e6d1233582 = $(`<div id="html_c2636cd6b789c4f1659037e6d1233582" style="width: 100.0%; height: 100.0%;">Display Name: Spring St (6)</div>`)[0];
+                popup_459619fe155fbf9570d6b7628ca26e1f.setContent(html_c2636cd6b789c4f1659037e6d1233582);
+            
+        
+
+        marker_5f54f9f1cce33333302a52b467285115.bindPopup(popup_459619fe155fbf9570d6b7628ca26e1f)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_5f54f9f1cce33333302a52b467285115);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_5f54f9f1cce33333302a52b467285115.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_5f54f9f1cce33333302a52b467285115.on('click', newMarker);
+            
+    
+            var circle_marker_4e5c59cb9ee1aa6e70a6f2864a8bc72f = L.circleMarker(
                 [40.707557, -74.011862],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_3865a225509fb23b7beab4e86166327c.bindTooltip(
-                `<div>
-                     Display Name: Wall St (4 5)
-                 </div>`,
-                {"sticky": true}
+            var marker_e22f8dabbf06ee0d74fff5615a382e44 = L.marker(
+                [40.707557, -74.011862],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_0975ab587a7f2cbd66de892576167a57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_e22f8dabbf06ee0d74fff5615a382e44.setIcon(icon_0975ab587a7f2cbd66de892576167a57);
         
     
-            var circle_marker_2b266c3e6f47fc496547da5c80b73322 = L.circleMarker(
+        var popup_28a04ee4f978b30adcdadc2682ea62b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b2fe037b224ba4b80ccebfd21e1fd87 = $(`<div id="html_9b2fe037b224ba4b80ccebfd21e1fd87" style="width: 100.0%; height: 100.0%;">Display Name: Wall St (4 5)</div>`)[0];
+                popup_28a04ee4f978b30adcdadc2682ea62b8.setContent(html_9b2fe037b224ba4b80ccebfd21e1fd87);
+            
+        
+
+        marker_e22f8dabbf06ee0d74fff5615a382e44.bindPopup(popup_28a04ee4f978b30adcdadc2682ea62b8)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_e22f8dabbf06ee0d74fff5615a382e44);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_e22f8dabbf06ee0d74fff5615a382e44.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_e22f8dabbf06ee0d74fff5615a382e44.on('click', newMarker);
+            
+    
+            var circle_marker_cfffdc5638e8c4b904d239e2c26b3397 = L.circleMarker(
                 [40.704817, -74.014065],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_2b266c3e6f47fc496547da5c80b73322.bindTooltip(
-                `<div>
-                     Display Name: Bowling Green (4 5)
-                 </div>`,
-                {"sticky": true}
+            var marker_a8e009744d99129f23cc96fc39ac11ae = L.marker(
+                [40.704817, -74.014065],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_b17406201aad0472837c16c3b80a387a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_a8e009744d99129f23cc96fc39ac11ae.setIcon(icon_b17406201aad0472837c16c3b80a387a);
         
     
-            var circle_marker_6e387f543c41480fb0cd70c73ee4e0c3 = L.circleMarker(
+        var popup_773fc034492c995c543463cea52ad0f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9c37f091b612003b2ea04a11aba6911 = $(`<div id="html_a9c37f091b612003b2ea04a11aba6911" style="width: 100.0%; height: 100.0%;">Display Name: Bowling Green (4 5)</div>`)[0];
+                popup_773fc034492c995c543463cea52ad0f1.setContent(html_a9c37f091b612003b2ea04a11aba6911);
+            
+        
+
+        marker_a8e009744d99129f23cc96fc39ac11ae.bindPopup(popup_773fc034492c995c543463cea52ad0f1)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_a8e009744d99129f23cc96fc39ac11ae);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_a8e009744d99129f23cc96fc39ac11ae.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_a8e009744d99129f23cc96fc39ac11ae.on('click', newMarker);
+            
+    
+            var circle_marker_1e93574bb110091070bf4d32ae8a3af9 = L.circleMarker(
                 [40.755882, -74.00191],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_6e387f543c41480fb0cd70c73ee4e0c3.bindTooltip(
-                `<div>
-                     Display Name: 34 St-Hudson Yards (7)
-                 </div>`,
-                {"sticky": true}
+            var marker_1f1e98c5edfa80fcd8f0f2ce7556739a = L.marker(
+                [40.755882, -74.00191],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_593e950cf26b28fffb3c64291536c2e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_1f1e98c5edfa80fcd8f0f2ce7556739a.setIcon(icon_593e950cf26b28fffb3c64291536c2e7);
         
     
-            var circle_marker_868dc19ebc414ebb011bfd340384c7b1 = L.circleMarker(
+        var popup_d2457eeab2f6d91981d325a009716043 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6b860b768cf3cb01af6c4ed3f320d97 = $(`<div id="html_f6b860b768cf3cb01af6c4ed3f320d97" style="width: 100.0%; height: 100.0%;">Display Name: 34 St-Hudson Yards (7)</div>`)[0];
+                popup_d2457eeab2f6d91981d325a009716043.setContent(html_f6b860b768cf3cb01af6c4ed3f320d97);
+            
+        
+
+        marker_1f1e98c5edfa80fcd8f0f2ce7556739a.bindPopup(popup_d2457eeab2f6d91981d325a009716043)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_1f1e98c5edfa80fcd8f0f2ce7556739a);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_1f1e98c5edfa80fcd8f0f2ce7556739a.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_1f1e98c5edfa80fcd8f0f2ce7556739a.on('click', newMarker);
+            
+    
+            var circle_marker_d864770a8ecc44029419324c459a26fd = L.circleMarker(
                 [40.73779633, -73.997732],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_868dc19ebc414ebb011bfd340384c7b1.bindTooltip(
-                `<div>
-                     Display Name: 14 St/6 Av (1 2 3 L F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_269aa49a788c1abf9fadd13925e53f33 = L.marker(
+                [40.73779633, -73.997732],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_a3c3c42e5b7e31c22b88de890aad7e14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_269aa49a788c1abf9fadd13925e53f33.setIcon(icon_a3c3c42e5b7e31c22b88de890aad7e14);
         
     
-            var circle_marker_aacb731168626929e3001acae6978583 = L.circleMarker(
+        var popup_bb6d1abbfd539d63123dab309471642d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a72eeeb2f6fc92813b74288c083fb4de = $(`<div id="html_a72eeeb2f6fc92813b74288c083fb4de" style="width: 100.0%; height: 100.0%;">Display Name: 14 St/6 Av (1 2 3 L F M)</div>`)[0];
+                popup_bb6d1abbfd539d63123dab309471642d.setContent(html_a72eeeb2f6fc92813b74288c083fb4de);
+            
+        
+
+        marker_269aa49a788c1abf9fadd13925e53f33.bindPopup(popup_bb6d1abbfd539d63123dab309471642d)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_269aa49a788c1abf9fadd13925e53f33);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_269aa49a788c1abf9fadd13925e53f33.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_269aa49a788c1abf9fadd13925e53f33.on('click', newMarker);
+            
+    
+            var circle_marker_475362e2cd42b9041c8f34935c64c988 = L.circleMarker(
                 [40.735066, -73.99041633],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_aacb731168626929e3001acae6978583.bindTooltip(
-                `<div>
-                     Display Name: 14 St-Union Sq (4 5 6 L N Q R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_18771ca60275a14e8396b3c02fd235b6 = L.marker(
+                [40.735066, -73.99041633],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_9821b7ccfd13847d05488c9f3c71d423 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_18771ca60275a14e8396b3c02fd235b6.setIcon(icon_9821b7ccfd13847d05488c9f3c71d423);
         
     
-            var circle_marker_cae33b8d621f386a2b6e5a77ff7cc154 = L.circleMarker(
+        var popup_bdfbb779ba1ba1c5fe246148ced15f64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10fa6b7cddd3e0fa127b4de96137ea81 = $(`<div id="html_10fa6b7cddd3e0fa127b4de96137ea81" style="width: 100.0%; height: 100.0%;">Display Name: 14 St-Union Sq (4 5 6 L N Q R W)</div>`)[0];
+                popup_bdfbb779ba1ba1c5fe246148ced15f64.setContent(html_10fa6b7cddd3e0fa127b4de96137ea81);
+            
+        
+
+        marker_18771ca60275a14e8396b3c02fd235b6.bindPopup(popup_bdfbb779ba1ba1c5fe246148ced15f64)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_18771ca60275a14e8396b3c02fd235b6);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_18771ca60275a14e8396b3c02fd235b6.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_18771ca60275a14e8396b3c02fd235b6.on('click', newMarker);
+            
+    
+            var circle_marker_2480522010a2f1206962b650d82d6355 = L.circleMarker(
                 [40.749643, -73.9878865],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_cae33b8d621f386a2b6e5a77ff7cc154.bindTooltip(
-                `<div>
-                     Display Name: 34 St-Herald Sq (B D F M N Q R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_ea92e4f776a1c223bb80888cfb7496cb = L.marker(
+                [40.749643, -73.9878865],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_758b5e2f81253dc0a7a70752c8d32f34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_ea92e4f776a1c223bb80888cfb7496cb.setIcon(icon_758b5e2f81253dc0a7a70752c8d32f34);
         
     
-            var circle_marker_12c53afebbda2b738b8c51ad1adb0e64 = L.circleMarker(
+        var popup_a6f0a3a12bcb67575fc069a45790aac3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe135c508320b9acd5d30400de7f93cb = $(`<div id="html_fe135c508320b9acd5d30400de7f93cb" style="width: 100.0%; height: 100.0%;">Display Name: 34 St-Herald Sq (B D F M N Q R W)</div>`)[0];
+                popup_a6f0a3a12bcb67575fc069a45790aac3.setContent(html_fe135c508320b9acd5d30400de7f93cb);
+            
+        
+
+        marker_ea92e4f776a1c223bb80888cfb7496cb.bindPopup(popup_a6f0a3a12bcb67575fc069a45790aac3)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_ea92e4f776a1c223bb80888cfb7496cb);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_ea92e4f776a1c223bb80888cfb7496cb.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_ea92e4f776a1c223bb80888cfb7496cb.on('click', newMarker);
+            
+    
+            var circle_marker_58a65d9488aa04e2a3d33f975d578bc7 = L.circleMarker(
                 [40.7540215, -73.983266],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_12c53afebbda2b738b8c51ad1adb0e64.bindTooltip(
-                `<div>
-                     Display Name: 42 St-Bryant Pk/5 Av (7 B D F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_9b2f12a695155341a8ad647ae4844e9a = L.marker(
+                [40.7540215, -73.983266],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_08754f6c1d20047a657f85af4769b0c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_9b2f12a695155341a8ad647ae4844e9a.setIcon(icon_08754f6c1d20047a657f85af4769b0c7);
         
     
-            var circle_marker_4273669c9a89b2300f13d491c2522f19 = L.circleMarker(
+        var popup_6cd5db9797e0821813bca1a595fed70c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6458cc6d07aede386dc71962f98c434f = $(`<div id="html_6458cc6d07aede386dc71962f98c434f" style="width: 100.0%; height: 100.0%;">Display Name: 42 St-Bryant Pk/5 Av (7 B D F M)</div>`)[0];
+                popup_6cd5db9797e0821813bca1a595fed70c.setContent(html_6458cc6d07aede386dc71962f98c434f);
+            
+        
+
+        marker_9b2f12a695155341a8ad647ae4844e9a.bindPopup(popup_6cd5db9797e0821813bca1a595fed70c)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_9b2f12a695155341a8ad647ae4844e9a);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_9b2f12a695155341a8ad647ae4844e9a.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_9b2f12a695155341a8ad647ae4844e9a.on('click', newMarker);
+            
+    
+            var circle_marker_faf486d2b78062ebd1e58a197a3901e5 = L.circleMarker(
                 [40.751992, -73.97735933],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_4273669c9a89b2300f13d491c2522f19.bindTooltip(
-                `<div>
-                     Display Name: Grand Central-42 St (4 5 6 7 S)
-                 </div>`,
-                {"sticky": true}
+            var marker_bb49eb1d84fff50865870a237b65614b = L.marker(
+                [40.751992, -73.97735933],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_4e51239507b979523868b61c417f6f90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_bb49eb1d84fff50865870a237b65614b.setIcon(icon_4e51239507b979523868b61c417f6f90);
         
     
-            var circle_marker_89aa7268ff8626f374b190009f094cb0 = L.circleMarker(
+        var popup_878c5e08046a3eb57586021aeb74c013 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_400d2f55909839dd034757b7f1969990 = $(`<div id="html_400d2f55909839dd034757b7f1969990" style="width: 100.0%; height: 100.0%;">Display Name: Grand Central-42 St (4 5 6 7 S)</div>`)[0];
+                popup_878c5e08046a3eb57586021aeb74c013.setContent(html_400d2f55909839dd034757b7f1969990);
+            
+        
+
+        marker_bb49eb1d84fff50865870a237b65614b.bindPopup(popup_878c5e08046a3eb57586021aeb74c013)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_bb49eb1d84fff50865870a237b65614b);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_bb49eb1d84fff50865870a237b65614b.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_bb49eb1d84fff50865870a237b65614b.on('click', newMarker);
+            
+    
+            var circle_marker_214a5d5911604b912eb33ceffcc86469 = L.circleMarker(
                 [40.755746, -73.9875808],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_89aa7268ff8626f374b190009f094cb0.bindTooltip(
-                `<div>
-                     Display Name: Times Sq-42 St/Port Authority Bus Terminal (1 2 3 7 A C E N Q R W S)
-                 </div>`,
-                {"sticky": true}
+            var marker_6038b8173a80c368c460ae9383901dd8 = L.marker(
+                [40.755746, -73.9875808],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_38ef4c217896030cb80c58da1ea7b5ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_6038b8173a80c368c460ae9383901dd8.setIcon(icon_38ef4c217896030cb80c58da1ea7b5ce);
         
     
-            var circle_marker_fb27dfa5e64cdbe777391d61ba0c5867 = L.circleMarker(
+        var popup_ff2e0b371bb49a4d6f7604258e948e91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1932a903ef56ce36cb2d9ed29527429 = $(`<div id="html_c1932a903ef56ce36cb2d9ed29527429" style="width: 100.0%; height: 100.0%;">Display Name: Times Sq-42 St/Port Authority Bus Terminal (1 2 3 7 A C E N Q R W S)</div>`)[0];
+                popup_ff2e0b371bb49a4d6f7604258e948e91.setContent(html_c1932a903ef56ce36cb2d9ed29527429);
+            
+        
+
+        marker_6038b8173a80c368c460ae9383901dd8.bindPopup(popup_ff2e0b371bb49a4d6f7604258e948e91)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_6038b8173a80c368c460ae9383901dd8);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_6038b8173a80c368c460ae9383901dd8.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_6038b8173a80c368c460ae9383901dd8.on('click', newMarker);
+            
+    
+            var circle_marker_38bc98b90004cc376e5f9ff47e2304b5 = L.circleMarker(
                 [40.7573295, -73.9704875],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_fb27dfa5e64cdbe777391d61ba0c5867.bindTooltip(
-                `<div>
-                     Display Name: Lexington Av/51-53 Sts (6 E M)
-                 </div>`,
-                {"sticky": true}
+            var marker_56b54c65c66d26e65dd33b2b48473cf1 = L.marker(
+                [40.7573295, -73.9704875],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_eaf4d72e481ed04124c15f275494fb87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_56b54c65c66d26e65dd33b2b48473cf1.setIcon(icon_eaf4d72e481ed04124c15f275494fb87);
         
     
-            var circle_marker_479a10feed9d7d1f68aab1acf7e0dcb4 = L.circleMarker(
+        var popup_8fa50613249fc889426453884051c706 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e19a051c713c164299e429a979b3edfb = $(`<div id="html_e19a051c713c164299e429a979b3edfb" style="width: 100.0%; height: 100.0%;">Display Name: Lexington Av/51-53 Sts (6 E M)</div>`)[0];
+                popup_8fa50613249fc889426453884051c706.setContent(html_e19a051c713c164299e429a979b3edfb);
+            
+        
+
+        marker_56b54c65c66d26e65dd33b2b48473cf1.bindPopup(popup_8fa50613249fc889426453884051c706)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_56b54c65c66d26e65dd33b2b48473cf1);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_56b54c65c66d26e65dd33b2b48473cf1.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_56b54c65c66d26e65dd33b2b48473cf1.on('click', newMarker);
+            
+    
+            var circle_marker_bbc9fd5374be2619edf7acc93eba3151 = L.circleMarker(
                 [40.762593, -73.9676125],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_479a10feed9d7d1f68aab1acf7e0dcb4.bindTooltip(
-                `<div>
-                     Display Name: Lexington Av/59 St (4 5 6 N R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_a3919ca1593ef0209cd42a756fe19993 = L.marker(
+                [40.762593, -73.9676125],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_5316930c8274103efd7ba93117eb0f34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_a3919ca1593ef0209cd42a756fe19993.setIcon(icon_5316930c8274103efd7ba93117eb0f34);
         
     
-            var circle_marker_cc18d70f649d6a904f17dd21581c9d60 = L.circleMarker(
+        var popup_b95943e2aa3f7c2f76710e1f2937eb37 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b79ae15c72435abd7db875475a050b4 = $(`<div id="html_5b79ae15c72435abd7db875475a050b4" style="width: 100.0%; height: 100.0%;">Display Name: Lexington Av/59 St (4 5 6 N R W)</div>`)[0];
+                popup_b95943e2aa3f7c2f76710e1f2937eb37.setContent(html_5b79ae15c72435abd7db875475a050b4);
+            
+        
+
+        marker_a3919ca1593ef0209cd42a756fe19993.bindPopup(popup_b95943e2aa3f7c2f76710e1f2937eb37)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_a3919ca1593ef0209cd42a756fe19993);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_a3919ca1593ef0209cd42a756fe19993.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_a3919ca1593ef0209cd42a756fe19993.on('click', newMarker);
+            
+    
+            var circle_marker_ab216c6d679c7239590017435c09d99c = L.circleMarker(
                 [40.7682715, -73.9818325],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_cc18d70f649d6a904f17dd21581c9d60.bindTooltip(
-                `<div>
-                     Display Name: 59 St-Columbus Circle (1 A C B D)
-                 </div>`,
-                {"sticky": true}
+            var marker_3ad5bc5382560786bfd5739bce21a402 = L.marker(
+                [40.7682715, -73.9818325],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_78788311d19f178f4ac8b10ad297e6d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_3ad5bc5382560786bfd5739bce21a402.setIcon(icon_78788311d19f178f4ac8b10ad297e6d7);
         
     
-            var circle_marker_ea0f16d026e3be7b23337fd777bb4f7c = L.circleMarker(
+        var popup_414c243d9df2b09da7827eade944bbb0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96e14e1f08100a709ca5665feaede05b = $(`<div id="html_96e14e1f08100a709ca5665feaede05b" style="width: 100.0%; height: 100.0%;">Display Name: 59 St-Columbus Circle (1 A C B D)</div>`)[0];
+                popup_414c243d9df2b09da7827eade944bbb0.setContent(html_96e14e1f08100a709ca5665feaede05b);
+            
+        
+
+        marker_3ad5bc5382560786bfd5739bce21a402.bindPopup(popup_414c243d9df2b09da7827eade944bbb0)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_3ad5bc5382560786bfd5739bce21a402);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_3ad5bc5382560786bfd5739bce21a402.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_3ad5bc5382560786bfd5739bce21a402.on('click', newMarker);
+            
+    
+            var circle_marker_fb2bf9531cbf7ebfe235c8ca5b6f0745 = L.circleMarker(
                 [40.740335, -74.002134],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_ea0f16d026e3be7b23337fd777bb4f7c.bindTooltip(
-                `<div>
-                     Display Name: 14 St/8 Av (A C E L)
-                 </div>`,
-                {"sticky": true}
+            var marker_70dc9b7a610664afa4205908687358ad = L.marker(
+                [40.740335, -74.002134],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_04388fe258f3a01b97f2ee08c3bd3719 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_70dc9b7a610664afa4205908687358ad.setIcon(icon_04388fe258f3a01b97f2ee08c3bd3719);
         
     
-            var circle_marker_b4a2fbbb80a5323277efd23597918300 = L.circleMarker(
+        var popup_b762248ec7b7081d107f09cf387d1796 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbd673506d1c94cccebeec3f61aae87e = $(`<div id="html_bbd673506d1c94cccebeec3f61aae87e" style="width: 100.0%; height: 100.0%;">Display Name: 14 St/8 Av (A C E L)</div>`)[0];
+                popup_b762248ec7b7081d107f09cf387d1796.setContent(html_bbd673506d1c94cccebeec3f61aae87e);
+            
+        
+
+        marker_70dc9b7a610664afa4205908687358ad.bindPopup(popup_b762248ec7b7081d107f09cf387d1796)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_70dc9b7a610664afa4205908687358ad);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_70dc9b7a610664afa4205908687358ad.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_70dc9b7a610664afa4205908687358ad.on('click', newMarker);
+            
+    
+            var circle_marker_2247049c6ddd4fa8d5dd9f636fcd7430 = L.circleMarker(
                 [40.725606, -73.9954315],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_b4a2fbbb80a5323277efd23597918300.bindTooltip(
-                `<div>
-                     Display Name: Broadway-Lafayette St/Bleecker St (6 B D F M)
-                 </div>`,
-                {"sticky": true}
+            var marker_f2ec9e865e284f743708d604cb26247f = L.marker(
+                [40.725606, -73.9954315],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_cdd3d71b8f6f85a2183aa56f4183ed50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_f2ec9e865e284f743708d604cb26247f.setIcon(icon_cdd3d71b8f6f85a2183aa56f4183ed50);
         
     
-            var circle_marker_8ee42423f7605b95110b33dafaf060f7 = L.circleMarker(
+        var popup_e0b47c52b33fd3e94e146afb3dbbdac2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e082ff18da5281c054ed047ee1e222d8 = $(`<div id="html_e082ff18da5281c054ed047ee1e222d8" style="width: 100.0%; height: 100.0%;">Display Name: Broadway-Lafayette St/Bleecker St (6 B D F M)</div>`)[0];
+                popup_e0b47c52b33fd3e94e146afb3dbbdac2.setContent(html_e082ff18da5281c054ed047ee1e222d8);
+            
+        
+
+        marker_f2ec9e865e284f743708d604cb26247f.bindPopup(popup_e0b47c52b33fd3e94e146afb3dbbdac2)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_f2ec9e865e284f743708d604cb26247f);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_f2ec9e865e284f743708d604cb26247f.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_f2ec9e865e284f743708d604cb26247f.on('click', newMarker);
+            
+    
+            var circle_marker_01f1e455066b7234836c9e37f5539fc7 = L.circleMarker(
                 [40.713154, -74.003766],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_8ee42423f7605b95110b33dafaf060f7.bindTooltip(
-                `<div>
-                     Display Name: Brooklyn Bridge-City Hall/Chambers St (4 5 6 J Z)
-                 </div>`,
-                {"sticky": true}
+            var marker_69d4530fcba78416a6dcaf4ba750af57 = L.marker(
+                [40.713154, -74.003766],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_71ee15e12ab994c8499b37c7c775bac2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_69d4530fcba78416a6dcaf4ba750af57.setIcon(icon_71ee15e12ab994c8499b37c7c775bac2);
         
     
-            var circle_marker_9590f5b46f8092213e9e73dcd50a6e2f = L.circleMarker(
+        var popup_bfe6dba7f39207095a1b12129185f10b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f619f6b5859627fd5dd30675c9fa46ce = $(`<div id="html_f619f6b5859627fd5dd30675c9fa46ce" style="width: 100.0%; height: 100.0%;">Display Name: Brooklyn Bridge-City Hall/Chambers St (4 5 6 J Z)</div>`)[0];
+                popup_bfe6dba7f39207095a1b12129185f10b.setContent(html_f619f6b5859627fd5dd30675c9fa46ce);
+            
+        
+
+        marker_69d4530fcba78416a6dcaf4ba750af57.bindPopup(popup_bfe6dba7f39207095a1b12129185f10b)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_69d4530fcba78416a6dcaf4ba750af57);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_69d4530fcba78416a6dcaf4ba750af57.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_69d4530fcba78416a6dcaf4ba750af57.on('click', newMarker);
+            
+    
+            var circle_marker_58a4e722101434208417af1e7f6e4012 = L.circleMarker(
                 [40.71870125, -74.00058],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_9590f5b46f8092213e9e73dcd50a6e2f.bindTooltip(
-                `<div>
-                     Display Name: Canal St (6 J Z N Q R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_6e984fcbe96227a96e34ca009236fb1c = L.marker(
+                [40.71870125, -74.00058],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_8887d29b7d2ac965f2d70831a72add3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_6e984fcbe96227a96e34ca009236fb1c.setIcon(icon_8887d29b7d2ac965f2d70831a72add3d);
         
     
-            var circle_marker_53bb314a261200a0a6166d3309976146 = L.circleMarker(
+        var popup_4d5515f1f2538d5f940c054b02387e57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8c2338f593d98f1804df866344d1b18 = $(`<div id="html_e8c2338f593d98f1804df866344d1b18" style="width: 100.0%; height: 100.0%;">Display Name: Canal St (6 J Z N Q R W)</div>`)[0];
+                popup_4d5515f1f2538d5f940c054b02387e57.setContent(html_e8c2338f593d98f1804df866344d1b18);
+            
+        
+
+        marker_6e984fcbe96227a96e34ca009236fb1c.bindPopup(popup_4d5515f1f2538d5f940c054b02387e57)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_6e984fcbe96227a96e34ca009236fb1c);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_6e984fcbe96227a96e34ca009236fb1c.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_6e984fcbe96227a96e34ca009236fb1c.on('click', newMarker);
+            
+    
+            var circle_marker_88fc9bafe89b64b23b31e1da038b392f = L.circleMarker(
                 [40.712603, -74.0095515],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_53bb314a261200a0a6166d3309976146.bindTooltip(
-                `<div>
-                     Display Name: Chambers St/WTC/Park Place/Cortlandt St (2 3 A C E R W)
-                 </div>`,
-                {"sticky": true}
+            var marker_19bef50fabbc9fd6478f1632e1545f99 = L.marker(
+                [40.712603, -74.0095515],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_6db97686e40b1a740bd4b1e19cb5e020 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_19bef50fabbc9fd6478f1632e1545f99.setIcon(icon_6db97686e40b1a740bd4b1e19cb5e020);
         
     
-            var circle_marker_168bc7456211bef8e77cc535534a25f9 = L.circleMarker(
+        var popup_d682bf7bffa7f2417904a205efb084ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e04047a61565bdd61a0f043be6901bf5 = $(`<div id="html_e04047a61565bdd61a0f043be6901bf5" style="width: 100.0%; height: 100.0%;">Display Name: Chambers St/WTC/Park Place/Cortlandt St (2 3 A C E R W)</div>`)[0];
+                popup_d682bf7bffa7f2417904a205efb084ce.setContent(html_e04047a61565bdd61a0f043be6901bf5);
+            
+        
+
+        marker_19bef50fabbc9fd6478f1632e1545f99.bindPopup(popup_d682bf7bffa7f2417904a205efb084ce)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_19bef50fabbc9fd6478f1632e1545f99);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_19bef50fabbc9fd6478f1632e1545f99.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_19bef50fabbc9fd6478f1632e1545f99.on('click', newMarker);
+            
+    
+            var circle_marker_7d1ba26396bda5956e58ef8d71cb6d25 = L.circleMarker(
                 [40.718463, -73.9877755],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_168bc7456211bef8e77cc535534a25f9.bindTooltip(
-                `<div>
-                     Display Name: Delancey St-Essex St (F M J Z)
-                 </div>`,
-                {"sticky": true}
+            var marker_bad39ab618d6b575303d6cb57ec082ed = L.marker(
+                [40.718463, -73.9877755],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_596ea06c8d627bb2d65d887907382b2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_bad39ab618d6b575303d6cb57ec082ed.setIcon(icon_596ea06c8d627bb2d65d887907382b2e);
         
     
-            var circle_marker_c4c65e48ead83fdefadfd1bdf22e2856 = L.circleMarker(
+        var popup_ea6b515354e747afeead55023c4a5356 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1a97a4f1d7382082bdefb9474768c76 = $(`<div id="html_c1a97a4f1d7382082bdefb9474768c76" style="width: 100.0%; height: 100.0%;">Display Name: Delancey St-Essex St (F M J Z)</div>`)[0];
+                popup_ea6b515354e747afeead55023c4a5356.setContent(html_c1a97a4f1d7382082bdefb9474768c76);
+            
+        
+
+        marker_bad39ab618d6b575303d6cb57ec082ed.bindPopup(popup_ea6b515354e747afeead55023c4a5356)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_bad39ab618d6b575303d6cb57ec082ed);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_bad39ab618d6b575303d6cb57ec082ed.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_bad39ab618d6b575303d6cb57ec082ed.on('click', newMarker);
+            
+    
+            var circle_marker_87a96dbc0f5904091038efdfc27540a6 = L.circleMarker(
                 [40.71008875, -74.00783825],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_c4c65e48ead83fdefadfd1bdf22e2856.bindTooltip(
-                `<div>
-                     Display Name: Fulton St (2 3 4 5 A C J Z)
-                 </div>`,
-                {"sticky": true}
+            var marker_b6fd5bf154964a1adce3bb40fe8089dc = L.marker(
+                [40.71008875, -74.00783825],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
+        
+    
+            var icon_51fe10c40072a741bc645f47444bc436 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
+            marker_b6fd5bf154964a1adce3bb40fe8089dc.setIcon(icon_51fe10c40072a741bc645f47444bc436);
         
     
-            var circle_marker_4e0d39364a6fb7adb990085219c26f57 = L.circleMarker(
+        var popup_a698aac62d5b6e14648eca07fee865fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2ef94ce4c04142d53675b1caffd0766 = $(`<div id="html_c2ef94ce4c04142d53675b1caffd0766" style="width: 100.0%; height: 100.0%;">Display Name: Fulton St (2 3 4 5 A C J Z)</div>`)[0];
+                popup_a698aac62d5b6e14648eca07fee865fa.setContent(html_c2ef94ce4c04142d53675b1caffd0766);
+            
+        
+
+        marker_b6fd5bf154964a1adce3bb40fe8089dc.bindPopup(popup_a698aac62d5b6e14648eca07fee865fa)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_b6fd5bf154964a1adce3bb40fe8089dc);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_b6fd5bf154964a1adce3bb40fe8089dc.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_b6fd5bf154964a1adce3bb40fe8089dc.on('click', newMarker);
+            
+    
+            var circle_marker_9fcd6ab58f2e139e8829127ed342580e = L.circleMarker(
                 [40.7025775, -74.013329],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(map_3a458ce21544361d06722a3ef55f525e);
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
     
-            circle_marker_4e0d39364a6fb7adb990085219c26f57.bindTooltip(
-                `<div>
-                     Display Name: Whitehall St-South Ferry (1 R W)
-                 </div>`,
-                {"sticky": true}
-            );
+            var marker_8ad61068e3893c0a61c83c6df32913bf = L.marker(
+                [40.7025775, -74.013329],
+                {}
+            ).addTo(map_b91b8ac8dfd6b0b505adc460b06498ff);
         
+    
+            var icon_ca68ebd52c7ed0a53cc6aa9a44feaf33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8ad61068e3893c0a61c83c6df32913bf.setIcon(icon_ca68ebd52c7ed0a53cc6aa9a44feaf33);
+        
+    
+        var popup_84712a8a20b89925374268ae662fcf17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_745704e23875b51f853534442e579606 = $(`<div id="html_745704e23875b51f853534442e579606" style="width: 100.0%; height: 100.0%;">Display Name: Whitehall St-South Ferry (1 R W)</div>`)[0];
+                popup_84712a8a20b89925374268ae662fcf17.setContent(html_745704e23875b51f853534442e579606);
+            
+        
+
+        marker_8ad61068e3893c0a61c83c6df32913bf.bindPopup(popup_84712a8a20b89925374268ae662fcf17)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_8ad61068e3893c0a61c83c6df32913bf);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_8ad61068e3893c0a61c83c6df32913bf.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                marker_8ad61068e3893c0a61c83c6df32913bf.on('click', newMarker);
+            
 </script>
 </html>

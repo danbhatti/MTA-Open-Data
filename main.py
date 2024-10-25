@@ -50,8 +50,15 @@ def plot_interactive_map(working_data, shortest_paths):
             color=station_color,
             fill=True,
             fill_opacity=0.7,
-            tooltip=f"Display Name: {working_data.iloc[i,4]}"
+            #tooltip=f"Display Name: {working_data.iloc[i,4]}"
         ).add_to(subway_map)
+        folium.Marker(
+            location=(working_data.iloc[i,12], working_data.iloc[i,13]),
+            popup=f"Display Name: {working_data.iloc[i,4]}",
+            icon=folium.Icon(color="blue"),
+        ).add_to(subway_map).add_child(folium.ClickForMarker())
+
+    # save the map as an HTML file
     subway_map.save('interactive_subway_map.html')
         
 
