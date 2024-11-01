@@ -38,32 +38,9 @@ def home():
         markers.append(marker)
         marker.add_to(subway_map)
 
-        # Create a unique identifier for the marker
-        click_event_script += f"""
-        var circleMarker{i} = L.circleMarker([{results_df.iloc[i, 12]}, {results_df.iloc[i, 13]}], {{
-            color: '{station_color}',
-            fillOpacity: 0.7,
-            radius: 6,
-            tooltip: '{stop_name}'
-        }}).add_to(subway_map);
-
-        circleMarker{i}.on('click', function() {{
-            onMarkerClick("{{ results_df.iloc[i]['Complex ID'] }}");  // Use Stop Name for the request
-        }});
-        """
-
-    click_event_script += """
-    function updateMarkers(data) {
-        data.colors.forEach((color, index) => {
-            if (circleMarker[index]) {
-                circleMarker[index].setStyle({color: color});
-            }
-        });
-        console.log("Markers updated with new colors:", data.colors);  // Debugging log
-    }
-    </script>"""
+      
+       
     
-    click_event_script += "</script>"
 
     subway_map.get_root().render()
 
@@ -95,29 +72,10 @@ def home():
 
 
 
-  
-@app.route('/recompute_paths')
-def recompute_paths():
-    #stop_name = request.args.get('23%20St')
-    #print(f"Received request to recompute paths from station: {stop_name}")  # Log station name
-    
-    shortest_paths = results_graph.dijkstra(31)
-    station_colors = [get_station_color(distance) for distance in shortest_paths]
-    
-    print(f"Calculated colors for each station: {station_colors}")  # Log the computed colors
-    return jsonify(colors=station_colors)
-    
+ 
 
 
-def folium_circle_marker(lat, long, color, name):
-    return folium.CircleMarker(
-            location=(lat, long),
-            radius=6,
-            color= color,
-            fill=True,
-            fill_opacity=0.7,
-            tooltip=f"Display Name: {name}"
-        )
+
 
 def get_station_color(distance):
     if distance == 0:
