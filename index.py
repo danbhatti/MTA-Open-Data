@@ -7,7 +7,7 @@ import graph
 app = Flask(__name__)
 
 # Global variable to hold the results DataFrame and graph
-results = requests.get('https://data.ny.gov/resource/5f5g-n3cz.json?cbd=TRUE').json()
+results = requests.get('https://data.ny.gov/resource/5f5g-n3cz.json?').json()
 results_df = pd.DataFrame.from_records(results)
 results_graph = graph.Network(results_df)
 station_color = '#0039A6'
@@ -22,7 +22,7 @@ def home():
     #results = requests.get('https://data.ny.gov/resource/5f5g-n3cz.json?$$app_token=5cNQYqwwGoXLCZfec7e7kJXEk').json()
     #results_df = pd.DataFrame.from_records(results)
     #results_graph = graph.Network(results_df)
-    shortest_paths = results_graph.dijkstra(35)
+    shortest_paths = results_graph.dijkstra(55)
 
     
 
@@ -73,7 +73,15 @@ def home():
 
 
  
-
+def folium_circle_marker(lat, long, color, name):
+    return folium.CircleMarker(
+            location=(lat, long),
+            radius=6,
+            color= color,
+            fill=True,
+            fill_opacity=0.7,
+            tooltip=f"Display Name: {name}"
+        )
 
 
 
