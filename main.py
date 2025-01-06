@@ -1,7 +1,8 @@
 """
 Name: Daniel Bhatti
 Date: 14 October 2024
-Description: 
+Description: This project uses numpy to abstract a graph and folium to visualize points'
+distance from the origin based on Djikstra's algorithm.
 
 to run test quick: python3 main.py data/MTA_Subway_Stations_and_Complexes_20241018.csv
 """
